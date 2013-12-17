@@ -1,0 +1,1 @@
+1. The interaction of Bisection and Newton algo in findRoot needs review. It seems like it is working now, but it could use some love. Maybe I should switch to a better root finding algo (i.e. Rudder or Brent)

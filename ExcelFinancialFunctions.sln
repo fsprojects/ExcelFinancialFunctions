@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ExcelFinancialFunctions", "src\ExcelFinancialFunctions\ExcelFinancialFunctions.fsproj", "{8853070C-D0B3-4DE6-B80B-B1D10F839359}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ExcelFinancialFunctions.ConsoleTests", "tests\ExcelFinancialFunctions.ConsoleTests\ExcelFinancialFunctions.ConsoleTests.fsproj", "{D9D40C7C-5928-4B59-8DEF-628FA0E4D8D0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7F0B1813-150B-4B30-8872-625C37BD67D4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{5E196AFF-81D3-4BD5-964A-5A9E642CD104}"
+	ProjectSection(SolutionItems) = preProject
+		docs\content\index.fsx = docs\content\index.fsx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{6FEE0C58-7CBD-4091-8D56-55AA733E1131}"
+	ProjectSection(SolutionItems) = preProject
+		docs\tools\generate.fsx = docs\tools\generate.fsx
+		docs\tools\templates\template.cshtml = docs\tools\templates\template.cshtml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "project", "project", "{6A5078DA-C727-406C-B792-ECC502BAA3D9}"
+	ProjectSection(SolutionItems) = preProject
+		build.fsx = build.fsx
+		README.md = README.md
+		RELEASE_NOTES.md = RELEASE_NOTES.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8853070C-D0B3-4DE6-B80B-B1D10F839359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8853070C-D0B3-4DE6-B80B-B1D10F839359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8853070C-D0B3-4DE6-B80B-B1D10F839359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8853070C-D0B3-4DE6-B80B-B1D10F839359}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9D40C7C-5928-4B59-8DEF-628FA0E4D8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9D40C7C-5928-4B59-8DEF-628FA0E4D8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9D40C7C-5928-4B59-8DEF-628FA0E4D8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9D40C7C-5928-4B59-8DEF-628FA0E4D8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5E196AFF-81D3-4BD5-964A-5A9E642CD104} = {7F0B1813-150B-4B30-8872-625C37BD67D4}
+		{6FEE0C58-7CBD-4091-8D56-55AA733E1131} = {7F0B1813-150B-4B30-8872-625C37BD67D4}
+	EndGlobalSection
+EndGlobal
