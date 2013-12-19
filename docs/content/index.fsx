@@ -8,6 +8,7 @@ Excel Financial Functions
 ===================
 
 This is a .NET library that provides the full set of financial functions from Excel. 
+It can be used from both F# and C# as well as from other .NET languages.
 The main goal for the library is compatibility with Excel, by providing the same functions, 
 with the same behaviour. 
 
@@ -24,8 +25,6 @@ re-implemented in managed code so that you do not need to have Excel installed t
   </div>
   <div class="span1"></div>
 </div>
-
-<img src="img/logo.png" alt="F# Project" style="float:right;width:150px;margin:10px" />
 
 Example
 -------
@@ -50,14 +49,12 @@ Samples & documentation
 The library comes with comprehensible documentation. The tutorials and articles are
 automatically generated from `*.fsx` files in [the content folder][content]. The API 
 reference is automatically generated from Markdown comments in the library implementation.
-*)
 
-(*** hide ***)
- * [API Reference](reference/index.html) contains automatically generated documentation for all types, modules
+* [API Reference](reference/index.html) contains automatically generated documentation for all types, modules
    and functions in the library. This includes additional brief samples on using most of the
    functions.
 
-(**  
+  
 Contributing and copyright
 --------------------------
 

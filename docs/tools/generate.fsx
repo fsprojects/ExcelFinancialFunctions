@@ -6,7 +6,7 @@
 // Binaries that have XML documentation (in a corresponding generated XML file)
 let referenceBinaries = [ "ExcelFinancialFunctions.dll" ]
 // Web site location for the generated documentation
-let website = "/ExcelFinancialFunctions"
+let website = "http://fsprojects.github.io/ExcelFinancialFunctions"
 
 // Specify more information about your project
 let info =
