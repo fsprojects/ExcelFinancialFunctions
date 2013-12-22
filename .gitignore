@@ -170,3 +170,6 @@ temp/
 
 # Test results produced by build
 TestResults.xml
+
+# Nuget outputs
+nuget/*.nupkg

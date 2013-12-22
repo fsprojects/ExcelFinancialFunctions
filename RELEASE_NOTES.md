@@ -6,3 +6,6 @@
 
 #### 2.0
 * Fixed order of parameter and naming to the Rate function
+
+#### 2.1
+* Move to github
