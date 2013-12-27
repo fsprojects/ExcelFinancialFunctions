@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7F0B1813-1
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{5E196AFF-81D3-4BD5-964A-5A9E642CD104}"
 	ProjectSection(SolutionItems) = preProject
+		docs\content\compatibility.fsx = docs\content\compatibility.fsx
 		docs\content\index.fsx = docs\content\index.fsx
 	EndProjectSection
 EndProject

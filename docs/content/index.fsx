@@ -51,9 +51,8 @@ automatically generated from `*.fsx` files in [the content folder][content]. The
 reference is automatically generated from Markdown comments in the library implementation.
 
 * [API Reference](reference/index.html) contains automatically generated documentation for all types, modules
-   and functions in the library. This includes additional brief samples on using most of the
-   functions.
-
+   and functions in the library. This includes the links to the Excel documentation.
+* [Compatibility](compatibility.html) section explains the possible differences with Excel's results. 
   
 Contributing and copyright
 --------------------------

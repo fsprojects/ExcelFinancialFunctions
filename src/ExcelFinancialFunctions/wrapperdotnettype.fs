@@ -32,7 +32,7 @@ type Financial =
         calcAccrIntM issue settlement rate par basis
     
     /// The depreciation for each accounting period by using a depreciation coefficient ([learn more](http://office.microsoft.com/en-us/excel/HP052089841033.aspx))  
-    /// ExcelCompaint is used because Excel stores 13 digits. amorDegrc alorithm rounds numbers  
+    /// ExcelCompliant is used because Excel stores 13 digits. AmorDegrc algorithm rounds numbers  
     /// and returns different results unless the numbers get rounded to 13 digits before rounding them.  
     /// I.E. 22.49999999999999 is considered 22.5 by Excel, but 22.4 by the .NET framework    
     static member AmorDegrc (cost, datePurchased, firstPeriod, salvage, period, rate, basis, excelCompliant) =
@@ -89,7 +89,7 @@ type Financial =
     /// Excel Ddb has two interesting characteristics:  
     /// 1. It special cases ddb for fractional periods between 0 and 1 by considering them to be 1  
     /// 2. It is inconsistent with VDB(..., True) for fractional periods, even if VDB(..., True) is defined to be the same as ddb. The algorithm for VDB is theoretically correct.  
-    /// This function makes the same 1. ajdjustment.
+    /// This function makes the same 1. adjustment.
     static member Ddb (cost, salvage, life, period, factor) =
         calcDdb cost salvage life period factor
 
