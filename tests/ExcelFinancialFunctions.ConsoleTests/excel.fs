@@ -11,7 +11,6 @@ open System.Numeric.DayCount
 open System.Numeric
 
 module internal ExcelTesting =
-
     // Need to be a singleton for perf reasons
     let app = new ApplicationClass()
     let funcs = app.WorksheetFunction

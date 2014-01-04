@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ExcelFinancialFunctions_vs2010", "src\ExcelFinancialFunctions\ExcelFinancialFunctions_vs2010.fsproj", "{B22646B7-461D-4D40-B56C-3DEC30E9767E}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ExcelFinancialFunctions.ConsoleTests_vs2010", "tests\ExcelFinancialFunctions.ConsoleTests\ExcelFinancialFunctions.ConsoleTests_vs2010.fsproj", "{DA9F7C2B-B236-4A19-88FA-B47EA8C172E3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B22646B7-461D-4D40-B56C-3DEC30E9767E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B22646B7-461D-4D40-B56C-3DEC30E9767E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B22646B7-461D-4D40-B56C-3DEC30E9767E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B22646B7-461D-4D40-B56C-3DEC30E9767E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA9F7C2B-B236-4A19-88FA-B47EA8C172E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA9F7C2B-B236-4A19-88FA-B47EA8C172E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA9F7C2B-B236-4A19-88FA-B47EA8C172E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA9F7C2B-B236-4A19-88FA-B47EA8C172E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
