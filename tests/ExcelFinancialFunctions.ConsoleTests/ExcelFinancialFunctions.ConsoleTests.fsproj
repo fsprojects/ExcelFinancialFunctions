@@ -36,6 +36,9 @@
     <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ExcelFinancialFunctions">
+      <HintPath>..\..\bin\ExcelFinancialFunctions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,13 +49,6 @@
     <Compile Include="testinfrastructure.fs" />
     <Compile Include="testsdef.fs" />
     <Compile Include="testsexec.fs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\ExcelFinancialFunctions\ExcelFinancialFunctions.fsproj">
-      <Name>ExcelFinancialFunctions</Name>
-      <Project>{8853070c-d0b3-4de6-b80b-b1d10f839359}</Project>
-      <Private>True</Private>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

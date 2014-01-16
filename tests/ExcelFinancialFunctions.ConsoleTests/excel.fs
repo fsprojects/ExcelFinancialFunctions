@@ -1,14 +1,13 @@
 // Wrappers for Excel functions to be used in the testcases
 #light
-namespace System.Numeric
+namespace System.Numerics
 open Microsoft.Office.Interop.Excel // You need Excel 12 to test this
 
 open System
 open System.Runtime.InteropServices // For COMException
-open System.Numeric.Common
-open System.Numeric.Tvm
-open System.Numeric.DayCount
-open System.Numeric
+open System.Numerics.Common
+open System.Numerics.Tvm
+open System.Numerics.DayCount
 
 module internal ExcelTesting =
     // Need to be a singleton for perf reasons

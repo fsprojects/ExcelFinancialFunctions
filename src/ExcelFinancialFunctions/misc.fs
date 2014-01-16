@@ -1,8 +1,9 @@
 // Various routings that don't have an obvious classification in other files.
 #light
-namespace System.Numeric
+namespace System.Numerics
+
 open System
-open System.Numeric.Common
+open System.Numerics.Common
 
 module internal Misc =
     

@@ -1,14 +1,13 @@
 // Test infrastructure. The idea is that Excel is the oracle.
 // I test a whole bunch of different values for parameters against Excel and check that the result is the same.
 #light
-namespace System.Numeric
+namespace System.Numerics
 
 open System
 open System.Collections
-open System.Numeric
-open System.Numeric.ExcelTesting
-open System.Numeric.Common
-open System.Numeric.Tvm
+open System.Numerics.ExcelTesting
+open System.Numerics.Common
+open System.Numerics.Tvm
 
 module internal TestInfrastructure =
     

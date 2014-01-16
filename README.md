@@ -7,19 +7,21 @@ This is a .NET library that provides the full set of financial functions from Ex
 
 #### Where I can find documentation on these functions?
 Just open Excel and click on Formulas/Financial or go to this [link](http://office.microsoft.com/client/helppreview.aspx?AssetID=HP100791841033&ns=EXCEL&lcid=1033&CTT=3&Origin=HP100623561033)
-
+There's also [API reference](http://fsprojects.github.io/ExcelFinancialFunctions/reference/index.html)
 
 #### I don't think one of the function is right. Excel produces the wrong results! Why don't you do it right?
 The goal is to replicate Excel results (right and wrong).  Feel free to contribute to the effort by coding what you think is the right solution
 
 
 #### How do I use the library?
-Just add ExcelFinancialFunctions.dll to the references in your project. The functions are provided as static methods on a Financial class in the System.Numeric namespace
+Just add ExcelFinancialFunctions.dll to the references in your project. The functions are provided as static methods on a Financial class in the System.Numerics namespace
 
 
 #### Have you tested this thing?
-Yes, there're 201,349 testcases running against it. You can easily raise that number significantly by adding new values to test in testdef.fs. 
-
+Yes, there're 199,252 testcases running against it. You can easily raise that number significantly by adding new values to test in testdef.fs.  
+_ExcelFinancialFunctions.ConsoleTests.sln_ contains the tests comparing the library results to Excel, so it should be installed on a test machine.  
+_ExcelFinancialFunctions.Test.sln_ - the unit tests matching Excel 2010 (their parameters and results are read from files).  
+You can find more information on compatibility [here](http://fsprojects.github.io/ExcelFinancialFunctions/compatibility.html).
 
 #### Are there any functions that behave different from Excel?
 Yes, there are two of them.

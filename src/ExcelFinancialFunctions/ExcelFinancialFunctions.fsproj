@@ -49,7 +49,7 @@
     <Compile Include="oddbonds.fs" />
     <Compile Include="misc.fs" />
     <Compile Include="wrapperdotnettype.fs" />
-    <Compile Include="testinfrastructure.fs" />
+    <Compile Include="testpreconditions.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>

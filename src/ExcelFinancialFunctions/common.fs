@@ -1,6 +1,6 @@
 // Common math, error management, zero finding, etc... routines used in all the rest of the library
 #light
-namespace System.Numeric
+namespace System.Numerics
 
 open System
 open System.Collections.Generic

@@ -2,10 +2,10 @@
 // I tried to abstract out the commonality in one interface, but I have some special cases in the rest of the code
 // If you want to support your own daycount, you should be ok just implementing the IDayCount interface 
 #light
-namespace System.Numeric
+namespace System.Numerics
+
 open System
-open System.Numeric.Common
-open System.Numeric
+open System.Numerics.Common
 
 module internal DayCount =
     // Some of the Excel day count info comes from http://www.dwheeler.com/yearfrac/excel-ooxml-yearfrac.pdf

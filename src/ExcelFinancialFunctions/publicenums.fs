@@ -1,6 +1,6 @@
 // All the enums exposed in the external API, I need to define them first becasue they are used in the internal part
 #light
-namespace System.Numeric
+namespace System.Numerics
 
 /// Indicates when payments are due (end/beginning of period)
 type PaymentDue =

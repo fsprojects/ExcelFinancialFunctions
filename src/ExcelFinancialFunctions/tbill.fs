@@ -1,10 +1,10 @@
 // Very simple TBill mathematics. The only interesting thing is the 'if' statement on line 17.
 #light
-namespace System.Numeric
+namespace System.Numerics
+
 open System
-open System.Numeric.Common
-open System.Numeric.DayCount
-open System.Numeric
+open System.Numerics.Common
+open System.Numerics.DayCount
 
 module internal TBill =
     

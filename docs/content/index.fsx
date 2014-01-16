@@ -34,7 +34,7 @@ This example demonstrates using the YIELD function to calculate bond yield.
 *)
 #r "ExcelFinancialFunctions.dll"
 open System
-open System.Numeric
+open System.Numerics
 
 // returns 0.065 or 6.5%
 Financial.Yield (DateTime(2008,2,15), DateTime(2016,11,15), 0.0575, 95.04287, 100.0, 

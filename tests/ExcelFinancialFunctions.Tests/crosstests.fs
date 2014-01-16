@@ -6,7 +6,7 @@ open NUnit.Framework
 
 [<SetCulture("en-US")>]
 module CrossTests = 
-    open System.Numeric
+    open System.Numerics
 
     [<Test>]
     let accrint() = runTests "accrint" parse8 Financial.AccrInt
@@ -156,6 +156,11 @@ module CrossTests =
     [<Test>]
     let npv() = runTests "npv" (fun [| r; cfs; res |] ->
         (parse r, parseArray cfs), parse res) Financial.Npv
+
+    [<Test>]
+    let ``npv given irr should be zero``() = 
+        runTests "irr" (fun [| cfs; _; res |] ->
+            (parse res, parseArray cfs), 0.) Financial.Npv
         
     [<Test>]
     let mirr() = runTests "mirr" (fun [| cfs; fr; rr; res |] ->
@@ -164,4 +169,4 @@ module CrossTests =
     [<Test>]
     let xirr() = runTests "xirr" (fun [| cfs; dates; guess; res |] ->
         (parseArray cfs, parseArray dates, parse guess), parse res) Financial.XIrr
-        
+  

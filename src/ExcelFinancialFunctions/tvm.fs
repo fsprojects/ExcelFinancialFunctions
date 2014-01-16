@@ -1,9 +1,9 @@
 // Time value of money routines, note the extensive treatment of error condition to help the user with sensible error messages
 #light
-namespace System.Numeric
+namespace System.Numerics
+
 open System
-open System.Numeric
-open System.Numeric.Common
+open System.Numerics.Common
 
 module internal Tvm =
         
