@@ -34,8 +34,8 @@ try
         "PV", (fun _ -> test5 calcPv pvEx rates npers pmts fvs dues tryPv);
         "FV", (fun _ -> test5 calcFv fvEx rates npers pmts pvs dues tryFv);  
         "PMT", (fun _ -> test5 calcPmt pmtEx rates npers pvs fvs dues tryPmt);
-        "NPER", (fun _ -> test5 calcNper nperEx rates pmts pvs fvs dues tryNper);                
-        "IPMT", (fun _ -> test6 calcIpmt ipmtEx rates pers npers pvs fvs dues tryIpmt);        
+        "NPER", (fun _ -> test5 calcNper nperEx rates pmts pvs fvs dues tryNper);        
+        "IPMT", (fun _ -> test6 calcIpmt ipmtEx rates pers npers pvs fvs dues tryIpmt); 
         "PPMT", (fun _ -> test6 calcPpmt ppmtEx rates pers npers pvs fvs dues tryPpmt);
         "CUMIPMT", (fun _ -> test6 calcCumipmt cumipmtEx rates npers pvs pers endPers dues tryCumipmt);
         "CUMPRINC", (fun _ -> test6 calcCumprinc cumprincEx rates npers pvs pers endPers dues tryCumprinc);
@@ -89,8 +89,8 @@ try
     spotTest5 calcPv pvEx 0.3 10. 20. 100. PaymentDue.EndOfPeriod
     spotTest5 calcFv fvEx 0.3 10. 20. 100. PaymentDue.EndOfPeriod
     spotTest5 calcPmt pmtEx 0.3 10. -20. 100. PaymentDue.EndOfPeriod
-    spotTest6 calcIpmt ipmtEx 0.3 3. 10. -20. 100. PaymentDue.EndOfPeriod
-    spotTest6 calcPpmt ppmtEx 0.3 4. 10. -20. 100. PaymentDue.EndOfPeriod
+    spotTest6 calcIpmt ipmtEx 0.3 3. 10. -20. 100. PaymentDue.EndOfPeriod 
+    spotTest6 calcPpmt ppmtEx 0.3 4. 10. -20. 100. PaymentDue.EndOfPeriod 
     spotTest6 calcCumipmt cumipmtEx 0.2 10. 100. 2. 5. PaymentDue.EndOfPeriod
     spotTest6 calcCumprinc cumprincEx 0.2 10. 100. 2. 5. PaymentDue.EndOfPeriod
     spotTest5 calcNper nperEx 0.3 10. 20. -100. PaymentDue.EndOfPeriod
@@ -99,8 +99,10 @@ try
     spotTest2 calcIrr irrEx [|-123.; 12.; 15.; 50.; 200.|] 0.14
     spotTest2 calcNpv npvEx 0.14 [|-123.; 12.; 15.; 50.; 200.|]
     spotTest3 calcMirr mirrEx [|-123.; 12.; 15.; 50.; 200.|] 0.14 0.12
-    if not(areEqual (calcXnpv 0.14 [1.;3.;4.] [date 1970 3 2; date 1988 2 3; date 1999 3 5]) 1.375214) then
-        printfn "%f different from %f" (calcXnpv 0.14 [1.;3.;4.] [date 1970 3 2; date 1988 2 3; date 1999 3 5]) 1.375214     
+
+    let xnpvRes = calcXnpv 0.14 [1.;3.;4.] [date 1970 3 2; date 1988 2 3; date 1999 3 5]
+    if not(areEqual xnpvRes 1.375214) then printfn "%f different from %f" xnpvRes 1.375214
+         
     spotTest3 calcXirr xirrEx [|-1.;3.;4.|] [|date 1970 3 2; date 1988 2 3; date 1999 3 5|] 0.14
     testXirrBugs ()
     spotTest5 calcDb dbEx 122. 12. 12. 2. 3.
@@ -118,8 +120,10 @@ try
     spotTest5 calcAccrIntM accrIntMEx (date 1984 3 4) (date 1991 4 5) 0.07 120. DayCountBasis.UsPsa30_360    
     spotTest7 calcAccrIntWrap accrIntEx (date 1984 3 4) (date 1994 3 4) (date 1991 4 5) 0.07 120. Frequency.Quarterly DayCountBasis.UsPsa30_360    
     spotTest7 calcPrice priceEx (date 1984 3 4) (date 1990 3 4) 0.07 0.1 110. Frequency.Quarterly DayCountBasis.ActualActual
-    if not(areEqual (calcYield (date 2008 2 15) (date 2016 11 15) 0.0575 95.04287 100. Frequency.SemiAnnual DayCountBasis.UsPsa30_360) 0.065) then
-        printfn "%f different from %f" (calcYield (date 2008 2 15) (date 2016 11 15) 0.0575 95.04287 100. Frequency.SemiAnnual DayCountBasis.UsPsa30_360) 0.065    
+    
+    let yieldRes = calcYield (date 2008 2 15) (date 2016 11 15) 0.0575 95.04287 100. Frequency.SemiAnnual DayCountBasis.UsPsa30_360
+    if not(areEqual yieldRes 0.065) then printfn "%f different from %f" yieldRes 0.065
+
     spotTest6 calcPriceMat priceMatEx (date 2008 2 13) (date 2009 4 13) (date 2007 11 11) 0.061 0.061 DayCountBasis.UsPsa30_360
     spotTest6 calcYieldMat yieldMatEx (date 2008 2 13) (date 2009 4 13) (date 2007 11 11) 0.061 120. DayCountBasis.UsPsa30_360
     spotTest3 calcYearFrac yearFracEx (date 2008 2 13) (date 2009 4 13) DayCountBasis.ActualActual

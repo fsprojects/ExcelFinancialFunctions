@@ -37,7 +37,7 @@ let tags = "excel finance fsharp csharp"
 // (<solutionFile>.sln is built during the building process)
 let solutionFile  = "ExcelFinancialFunctions"
 // Pattern specifying assemblies to be tested using NUnit
-let testAssemblies = ["tests/*/bin/*/ExcelFinancialFunctions*Tests*.dll"]
+let testAssemblies = "tests/*/bin/*/ExcelFinancialFunctions.Tests.dll"
 
 // Git configuration (used for publishing documentation in gh-pages branch)
 // The profile where the project is posted 
@@ -81,10 +81,8 @@ Target "CleanDocs" (fun _ ->
 // Build library & test project
 
 Target "Build" (fun _ ->
-    { BaseDirectory = __SOURCE_DIRECTORY__
-      Includes = [ solutionFile +       ".sln"
-                   solutionFile + ".Tests.sln" ]
-      Excludes = [] } 
+    !! (solutionFile + ".sln")
+        ++ (solutionFile + ".Tests.sln")
     |> MSBuildRelease "" "Rebuild"
     |> ignore
 )
@@ -93,11 +91,7 @@ Target "Build" (fun _ ->
 // Run the unit tests using test runner & kill test runner when complete
 
 Target "RunTests" (fun _ ->
-    ActivateFinalTarget "CloseTestRunner"
-
-    { BaseDirectory = __SOURCE_DIRECTORY__
-      Includes = testAssemblies
-      Excludes = [] } 
+    !! testAssemblies
     |> NUnit (fun p ->
         { p with
             DisableShadowCopy = true
@@ -168,7 +162,7 @@ Target "All" DoNothing
   ==> "RestorePackages"
   ==> "AssemblyInfo"
   ==> "Build"
-  //==> "RunTests"
+  ==> "RunTests"
   ==> "All"
 
 "All" 

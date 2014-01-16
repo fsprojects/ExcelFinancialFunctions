@@ -86,9 +86,9 @@ module internal TestsDef =
         ( r <> -1. || (r = -1. && nper > 0.) )  &&
         ( pmt <> 0. || pv <> 0. )       
     let tryPmt r nper pv fv pd =
-        ( raisable r nper)                                                      &&
-        ( r <> -1. || (r = -1. && nper > 0. && pd = PaymentDue.EndOfPeriod) )   &&
-        ( fv <> 0. || pv <> 0. )                                                &&
+        ( raisable r nper)          &&
+        ( r > -1. )                 &&
+        ( fv <> 0. || pv <> 0. )    &&
         ( annuityCertainPvFactor r nper pd <> 0. )
     let tryNper r pmt pv fv pd =
         ( r > -1.)                                  &&
@@ -201,7 +201,7 @@ module internal TestsDef =
         ( raisable r nper)                  &&
         ( raisable r (per - 1.))            &&
         ( fv <> 0. || pv <> 0. )            &&
-        ( r <> -1. || (r = -1. && per > 1. && nper > 1. && pd = PaymentDue.EndOfPeriod) )       &&
+        ( r > -1. )                         &&
         ( annuityCertainPvFactor r nper pd <> 0. )                                  &&
         ( per >= 1. && per <= nper )        &&
         ( nper > 0. )                       
@@ -209,7 +209,7 @@ module internal TestsDef =
         ( raisable r nper)                  &&
         ( raisable r (per - 1.))            &&
         ( fv <> 0. || pv <> 0. )            &&
-        ( r <> -1. || (r = -1. && per > 1. && nper > 1. && pd = PaymentDue.EndOfPeriod) )       &&
+        ( r > -1.)                          &&
         ( annuityCertainPvFactor r nper pd <> 0. )                                  &&
         ( per >= 1. && per <= nper )        &&
         ( nper > 0. )                       
