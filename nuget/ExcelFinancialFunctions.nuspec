@@ -7,6 +7,7 @@
     <owners>@authors@</owners>
     <licenseUrl>http://github.com/fsprojects/ExcelFinancialFunctions/blob/master/LICENSE.txt</licenseUrl>
     <projectUrl>http://fsprojects.github.io/ExcelFinancialFunctions</projectUrl>
+    <iconUrl>https://raw.github.com/fsprojects/ExcelFinancialFunctions/master/docs/files/img/logo.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <summary>@summary@</summary>
     <description>@description@</description>
@@ -17,5 +18,7 @@
   </metadata>
   <files>
     <file src="..\bin\ExcelFinancialFunctions.dll" target="lib/net40" />
+    <file src="..\bin\ExcelFinancialFunctions.pdb" target="lib/net40" />
+    <file src="..\bin\ExcelFinancialFunctions.xml" target="lib/net40" />
   </files>
 </package>
