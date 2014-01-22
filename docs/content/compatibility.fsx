@@ -12,8 +12,10 @@ Compatibility
 This library replicates Excel behavior. There're 199,252 tests verifying the results against Excel 2010 and their number can be raised significantly by adding new test values. Several tests check the function properties, e.g. that bond duration can't be greater than maturity.    
 The current version matches Excel 2010, which is slightly different from 2003, see [Function Improvements in Excel 2010](http://blogs.office.com/b/microsoft-excel/archive/2009/09/10/function-improvements-in-excel-2010.aspx). 
 Note, that console tests require Excel, whereas the unit tests can be run even on mono - their parameters and expected results are stored in files. 
+  
 
-However, there're some differences comparing to Excel which should be taken into account. The details are provided below.
+However, there're still some differences comparing to Excel. 
+_Read more about OpenOffice vs Excel [here](openofficediff.html)._
 
 
 COUPDAYS

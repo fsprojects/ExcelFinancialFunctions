@@ -52,7 +52,7 @@ reference is automatically generated from Markdown comments in the library imple
 
 * [API Reference](reference/index.html) contains automatically generated documentation for all types, modules
    and functions in the library. This includes the links to the Excel documentation.
-* [Compatibility](compatibility.html) section explains the possible differences with Excel's results. 
+* [Excel Compatibility](compatibility.html) section explains the possible differences with Excel's results. 
   
 Contributing and copyright
 --------------------------

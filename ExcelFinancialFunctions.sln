@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{5E19
 	ProjectSection(SolutionItems) = preProject
 		docs\content\compatibility.fsx = docs\content\compatibility.fsx
 		docs\content\index.fsx = docs\content\index.fsx
+		docs\content\openofficediff.fsx = docs\content\openofficediff.fsx
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tools", "tools", "{6FEE0C58-7CBD-4091-8D56-55AA733E1131}"
