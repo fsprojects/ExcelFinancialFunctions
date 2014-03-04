@@ -159,7 +159,7 @@ module CrossTests =
 
     [<Test>]
     let ``npv given irr should be zero``() = 
-        runTests "irr" (fun [| cfs; _; res |] ->
+        runTests "npv(irr)" (fun [| cfs; _; res |] ->
             (parse res, parseArray cfs), 0.) Financial.Npv
         
     [<Test>]

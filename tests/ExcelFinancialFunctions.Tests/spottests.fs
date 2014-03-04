@@ -51,3 +51,31 @@ module SpotTests =
             tryTBillPrice sd md disc
             ==>
             lazy (Financial.TBillPrice(sd, md, disc) - 100. < PRECISION))
+
+    [<Test>]
+    let ``vdb in the period should be the same as the sum by subperiods``() =
+        fsCheck (fun c s len switchToStraightLine ->
+            let start, life = 0., 10.
+            let cost, salvage, period = toFloat c * 1000., toFloat s * 100., toFloat len
+            let p1, p2 = period, period * 2.
+            
+            tryVdb cost salvage life start p2 1. switchToStraightLine
+            ==>
+            lazy (let inline vdb sd ed = Financial.Vdb(cost, salvage, life, sd, ed, 1., switchToStraightLine)
+                  abs (vdb start p1 + vdb p1 p2 - vdb start p2) < PRECISION))
+
+    [<Test>]
+    let ``cumulative accrint should be the same as the sum of payments``() =
+        fsCheck (fun (issue: DateTime) p r freq basis frac ->
+            let par, rate = toFloat p * 1000000., toFloat r
+            let fd, md = issue.AddDays 30., issue.AddYears 10            
+            let ncd = Financial.CoupNCD(fd, md, freq, basis)
+
+            tryAccrInt issue ncd fd rate par freq basis
+            ==>
+            lazy (let inline accrint interest settlement =
+                      Financial.AccrInt(issue, interest, settlement, rate, par, freq, basis)
+
+                  let daysTillInterest = max (360. / float freq * toFloat frac) 1.
+                  let interest = ncd.AddDays daysTillInterest
+                  abs (accrint ncd fd + accrint interest ncd - accrint interest fd) < PRECISION))
