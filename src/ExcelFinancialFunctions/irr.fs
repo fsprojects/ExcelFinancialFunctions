@@ -1,10 +1,10 @@
 // Finding internal rate of return routines. I use a different algo then excel. The results might be different.
 #light
-namespace System.Numerics
+namespace Excel.FinancialFunctions
 
 open System
-open System.Numerics.Common
-open System.Numerics.Tvm
+open Excel.FinancialFunctions.Common
+open Excel.FinancialFunctions.Tvm
 
 module internal Irr =
 

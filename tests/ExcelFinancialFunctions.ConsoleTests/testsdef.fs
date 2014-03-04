@@ -1,19 +1,19 @@
 // All the test values that I want to throw at the testcase infrastructure. Just add values here if you want to run 1,000,0000,000 tests
 #light
 
-namespace System.Numerics
+namespace Excel.FinancialFunctions
 
 open System
 open System.Collections
-open System.Numerics.ExcelTesting
-open System.Numerics.Common
-open System.Numerics.Tvm
-open System.Numerics.Irr
-open System.Numerics.TestInfrastructure
-open System.Numerics.Depreciation
-open System.Numerics.DayCount
-open System.Numerics.Bonds
-open System.Numerics.OddBonds
+open Excel.FinancialFunctions.ExcelTesting
+open Excel.FinancialFunctions.Common
+open Excel.FinancialFunctions.Tvm
+open Excel.FinancialFunctions.Irr
+open Excel.FinancialFunctions.TestInfrastructure
+open Excel.FinancialFunctions.Depreciation
+open Excel.FinancialFunctions.DayCount
+open Excel.FinancialFunctions.Bonds
+open Excel.FinancialFunctions.OddBonds
 
 module internal TestsDef =
 

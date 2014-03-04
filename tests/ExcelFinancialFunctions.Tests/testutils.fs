@@ -1,6 +1,6 @@
 ﻿#nowarn "25"
 
-namespace ExcelFinancialFunctions.Tests
+namespace Excel.FinancialFunctions.Tests
 
 open FsCheck
 open NUnit.Framework

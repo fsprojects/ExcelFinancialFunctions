@@ -1,10 +1,10 @@
 // Loan related calculation routines, small variations on TVM
 #light
-namespace System.Numerics
+namespace Excel.FinancialFunctions
 
 open System
-open System.Numerics.Common
-open System.Numerics.Tvm
+open Excel.FinancialFunctions.Common
+open Excel.FinancialFunctions.Tvm
 
 module internal Loan =
     let inline approxEqual x y = abs (x - y) < 1e-10

@@ -1,21 +1,20 @@
 // I cannot use F# optional parameters because they end up forcing you to include the F# dll
 // Instead I use overloading with parsimony to achieve similar goals
 #light
-namespace System.Numerics
+namespace Excel.FinancialFunctions
 
 open System
 open System.Collections
-open System.Numerics
-open System.Numerics.Common
-open System.Numerics.Tvm
-open System.Numerics.Loan
-open System.Numerics.Irr
-open System.Numerics.Depreciation
-open System.Numerics.DayCount
-open System.Numerics.Bonds
-open System.Numerics.TBill
-open System.Numerics.Misc
-open System.Numerics.OddBonds
+open Excel.FinancialFunctions.Common
+open Excel.FinancialFunctions.Tvm
+open Excel.FinancialFunctions.Loan
+open Excel.FinancialFunctions.Irr
+open Excel.FinancialFunctions.Depreciation
+open Excel.FinancialFunctions.DayCount
+open Excel.FinancialFunctions.Bonds
+open Excel.FinancialFunctions.TBill
+open Excel.FinancialFunctions.Misc
+open Excel.FinancialFunctions.OddBonds
 
 /// A wrapper class to expose the Excel financial functions API to .NET clients
 type Financial =

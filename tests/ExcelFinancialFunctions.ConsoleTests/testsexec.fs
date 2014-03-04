@@ -7,21 +7,21 @@
 
 open System
 open System.Collections
-open System.Numerics
-open System.Numerics.ExcelTesting
-open System.Numerics.Common
-open System.Numerics.Tvm
-open System.Numerics.Loan
-open System.Numerics.Irr
-open System.Numerics.Depreciation
-open System.Numerics.DayCount
-open System.Numerics.TestInfrastructure
-open System.Numerics.TestsDef
-open System.Numerics.Bonds
-open System.Numerics.TBill
-open System.Numerics.Misc
-open System.Numerics.OddBonds
-open System.Numerics.TestPreconditions
+open Excel.FinancialFunctions
+open Excel.FinancialFunctions.ExcelTesting
+open Excel.FinancialFunctions.Common
+open Excel.FinancialFunctions.Tvm
+open Excel.FinancialFunctions.Loan
+open Excel.FinancialFunctions.Irr
+open Excel.FinancialFunctions.Depreciation
+open Excel.FinancialFunctions.DayCount
+open Excel.FinancialFunctions.TestInfrastructure
+open Excel.FinancialFunctions.TestsDef
+open Excel.FinancialFunctions.Bonds
+open Excel.FinancialFunctions.TBill
+open Excel.FinancialFunctions.Misc
+open Excel.FinancialFunctions.OddBonds
+open Excel.FinancialFunctions.TestPreconditions
 
 try         
     let tests = [|

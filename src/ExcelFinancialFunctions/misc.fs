@@ -1,9 +1,9 @@
 // Various routings that don't have an obvious classification in other files.
 #light
-namespace System.Numerics
+namespace Excel.FinancialFunctions
 
 open System
-open System.Numerics.Common
+open Excel.FinancialFunctions.Common
 
 module internal Misc =
     

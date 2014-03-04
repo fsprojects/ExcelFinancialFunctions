@@ -1,9 +1,9 @@
 // Time value of money routines, note the extensive treatment of error condition to help the user with sensible error messages
 #light
-namespace System.Numerics
+namespace Excel.FinancialFunctions
 
 open System
-open System.Numerics.Common
+open Excel.FinancialFunctions.Common
 
 module internal Tvm =
         

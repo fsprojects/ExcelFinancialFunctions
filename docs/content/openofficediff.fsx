@@ -3,7 +3,7 @@
 #r "ExcelFinancialFunctions.dll"
 
 open System
-open System.Numerics
+open Excel.FinancialFunctions
 
 (**
 Difference between OpenOffice and the library

@@ -1,4 +1,4 @@
-﻿namespace ExcelFinancialFunctions.Tests
+﻿namespace Excel.FinancialFunctions.Tests
 
 open FsCheck
 open NUnit.Framework
@@ -6,7 +6,7 @@ open NUnit.Framework
 [<SetCulture("en-US")>]
 module SpotTests =
     open System 
-    open System.Numerics
+    open Excel.FinancialFunctions
     open TestPreconditions
 
     [<Test>]

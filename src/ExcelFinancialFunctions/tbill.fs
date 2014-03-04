@@ -1,10 +1,10 @@
 // Very simple TBill mathematics. The only interesting thing is the 'if' statement on line 17.
 #light
-namespace System.Numerics
+namespace Excel.FinancialFunctions
 
 open System
-open System.Numerics.Common
-open System.Numerics.DayCount
+open Excel.FinancialFunctions.Common
+open Excel.FinancialFunctions.DayCount
 
 module internal TBill =
     

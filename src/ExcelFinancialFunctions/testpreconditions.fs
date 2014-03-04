@@ -1,4 +1,4 @@
-﻿namespace System.Numerics
+﻿namespace Excel.FinancialFunctions
 
 [<assembly:System.Runtime.CompilerServices.InternalsVisibleTo "ExcelFinancialFunctions.ConsoleTests">]
 [<assembly:System.Runtime.CompilerServices.InternalsVisibleTo "ExcelFinancialFunctions.Tests">]
@@ -6,10 +6,10 @@ do()
 
 module internal TestPreconditions =
     open System
-    open System.Numerics.Common
-    open System.Numerics.Tvm
-    open System.Numerics.Irr
-    open System.Numerics.DayCount
+    open Excel.FinancialFunctions.Common
+    open Excel.FinancialFunctions.Tvm
+    open Excel.FinancialFunctions.Irr
+    open Excel.FinancialFunctions.DayCount
 
     // Functions to define valid parameter combinations to testcases given that the permutations can create invalid parameters combinations
     let tryPv r nper pmt fv pd =

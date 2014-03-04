@@ -14,7 +14,7 @@ The goal is to replicate Excel results (right and wrong).  Feel free to contribu
 
 
 #### How do I use the library?
-Just add ExcelFinancialFunctions.dll to the references in your project. The functions are provided as static methods on a Financial class in the System.Numerics namespace
+Just add ExcelFinancialFunctions.dll to the references in your project. The functions are provided as static methods on a Financial class in the Excel.FinancialFunctions namespace
 
 
 #### Have you tested this thing?

@@ -9,3 +9,7 @@
 
 #### 2.1
 * Move to github
+
+#### 2.2
+* Rename the top-level namespace to `Excel.FinancialFunctions`
+

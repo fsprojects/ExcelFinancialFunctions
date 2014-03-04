@@ -1,9 +1,9 @@
 // Bonds mathematics the Excel way 
 #light
-namespace System.Numerics
+namespace Excel.FinancialFunctions
 
-open System.Numerics.Common
-open System.Numerics.DayCount
+open Excel.FinancialFunctions.Common
+open Excel.FinancialFunctions.DayCount
 
 module internal Bonds =
 

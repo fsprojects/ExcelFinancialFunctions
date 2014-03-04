@@ -1,13 +1,13 @@
 // Wrappers for Excel functions to be used in the testcases
 #light
-namespace System.Numerics
+namespace Excel.FinancialFunctions
 open Microsoft.Office.Interop.Excel // You need Excel 12 to test this
 
 open System
 open System.Runtime.InteropServices // For COMException
-open System.Numerics.Common
-open System.Numerics.Tvm
-open System.Numerics.DayCount
+open Excel.FinancialFunctions.Common
+open Excel.FinancialFunctions.Tvm
+open Excel.FinancialFunctions.DayCount
 
 module internal ExcelTesting =
     // Need to be a singleton for perf reasons

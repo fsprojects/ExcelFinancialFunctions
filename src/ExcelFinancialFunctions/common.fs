@@ -1,6 +1,6 @@
 // Common math, error management, zero finding, etc... routines used in all the rest of the library
 #light
-namespace System.Numerics
+namespace Excel.FinancialFunctions
 
 open System
 open System.Collections.Generic

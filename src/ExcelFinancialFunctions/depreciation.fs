@@ -1,10 +1,10 @@
 // Depreciation calculations. AmorDegr and AmorLinc required a lot of work and trial and error. I wonder how many people are using them.
 #light
-namespace System.Numerics
+namespace Excel.FinancialFunctions
 
 open System
-open System.Numerics.Common
-open System.Numerics.DayCount // because of AmorDegr and AmorLinc
+open Excel.FinancialFunctions.Common
+open Excel.FinancialFunctions.DayCount // because of AmorDegr and AmorLinc
 
 module internal Depreciation =
 

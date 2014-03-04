@@ -1,12 +1,12 @@
 ﻿#nowarn "25"
 
-namespace ExcelFinancialFunctions.Tests
+namespace Excel.FinancialFunctions.Tests
 
 open NUnit.Framework
 
 [<SetCulture("en-US")>]
 module CrossTests = 
-    open System.Numerics
+    open Excel.FinancialFunctions
 
     [<Test>]
     let accrint() = runTests "accrint" parse8 Financial.AccrInt
