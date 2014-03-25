@@ -119,13 +119,15 @@ module internal Common =
         else
             let lower, upper = findBounds f guess -1.0 Double.MaxValue precision
             bisection f lower upper 0 precision
-            
+     
     let memoize f =
         let m = new Dictionary<_,_> ()
         fun x ->
-                let foundIt, res = m.TryGetValue(x)
-                if foundIt then res
-                else
-                    let r = f x
-                    m.Add(x, r)
-                    r
+                lock m (fun () ->
+                    let foundIt, res = m.TryGetValue(x)
+                    if foundIt then res
+                    else
+                        let r = f x
+                        m.Add(x, r)
+                        r
+                )
