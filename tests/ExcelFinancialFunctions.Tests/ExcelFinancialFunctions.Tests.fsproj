@@ -43,6 +43,7 @@
     <Compile Include="testutils.fs" />
     <Compile Include="crosstests.fs" />
     <Compile Include="spottests.fs" />
+    <Compile Include="concurrencytests.fs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ExcelFinancialFunctions">
