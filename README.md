@@ -44,3 +44,9 @@ Notice that in Excel by using '1' (no_switch) instead of '0' as the last paramet
 
 
 _(Note, the original version of the library is still available [here.](http://code.msdn.microsoft.com/office/Excel-Financial-functions-6afc7d42))_
+
+#### Maintainer(s)
+
+- [@luajalla](https://github.com/luajalla)
+
+The default maintainer account for projects under "fsprojects" is [@fsgit](https://github.com/fsgit) - F# Community Project Incubation Space (repo management)
