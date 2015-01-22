@@ -1,4 +1,7 @@
-ExcelFinancialFunctions
+[![Issue Stats](http://issuestats.com/github/fsprojects/ExcelFinancialFunctions/badge/issue)](http://issuestats.com/github/fsprojects/ExcelFinancialFunctions)
+[![Issue Stats](http://issuestats.com/github/fsprojects/ExcelFinancialFunctions/badge/pr)](http://issuestats.com/github/fsprojects/ExcelFinancialFunctions)
+
+ExcelFinancialFunctions [![NuGet Status](http://img.shields.io/nuget/v/ExcelFinancialFunctions.svg?style=flat)](https://www.nuget.org/packages/ExcelFinancialFunctions/)
 =======================
   
 #### What is it?
