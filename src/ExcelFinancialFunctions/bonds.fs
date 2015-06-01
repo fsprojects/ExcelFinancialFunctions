@@ -156,13 +156,13 @@ module internal Bonds =
         accrInt issue firstInterest settlement rate par frequency basis calcMethod
     let calcPrice settlement maturity rate yld redemption (frequency:Frequency) basis =
         (maturity > settlement)         |> elseThrow "maturity must be after settlement"
-        (rate > 0.)                     |> elseThrow "rate must be more than 0"
+        (rate >= 0.)                    |> elseThrow "rate must not be negative"
         (yld > 0.)                      |> elseThrow "yld must be more than 0"
         (redemption > 0.)               |> elseThrow "redemption must be more than 0"
         price settlement maturity rate yld redemption (float (int frequency)) basis
     let calcYield settlement maturity rate pr redemption (frequency:Frequency) basis =
         (maturity > settlement)         |> elseThrow "maturity must be after settlement"
-        (rate > 0.)                     |> elseThrow "rate must be more than 0"
+        (rate >= 0.)                    |> elseThrow "rate must not be negative"
         (pr > 0.)                       |> elseThrow "pr must be more than 0"
         (redemption > 0.)               |> elseThrow "redemption must be more than 0"
         yieldFunc settlement maturity rate pr redemption (float (int frequency)) basis        
