@@ -13,3 +13,5 @@
 #### 2.2
 * Rename the top-level namespace to `Excel.FinancialFunctions`
 
+#### 2.2.1
+* Price and yield functions now accept rate = 0
