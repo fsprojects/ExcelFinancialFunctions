@@ -67,10 +67,8 @@ module internal Bonds =
     let yieldFunc settlement maturity rate pr redemption frequency basis =
         let n, pcd, a, e, dsr = getPriceYieldFactors settlement maturity frequency basis
         if n <= 1. then
-            let par = 100. // Logical inference from Excel's docs
-            let firstNum = (redemption / 100. + rate / frequency) - (par / 100. + (a / e * rate /frequency))
-            let firstDen = par / 100. + (a / e * rate / frequency)
-            firstNum / firstDen * frequency * e / dsr
+            let k = (redemption / 100. + rate / frequency) / (pr / 100. + (a / e * rate /frequency)) - 1.0
+            k * frequency * e / dsr
         else
             findRoot (fun yld -> price settlement maturity rate yld redemption frequency basis - pr) 0.05
     let getMatFactors settlement maturity issue basis =
