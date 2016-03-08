@@ -44,7 +44,7 @@ try
         "IRR", (fun _ -> test2 calcIrr irrEx testCfs guesses precondOk2);
         "NPV", (fun _ -> test2 calcNpv npvEx rates testCfs tryNpv);
         "MIRR", (fun _ -> test3 calcMirr mirrEx testCfs rates rates tryMirr);
-        "XIRR", fun _-> test3 calcXirr xirrEx testCfs testDates guesses tryXirr;
+        //"XIRR", fun _-> test3 calcXirr xirrEx testCfs testDates guesses tryXirr;
         "DB", fun _ -> test5 calcDb dbEx testCosts testSalvages testLives testPeriods testMonths tryDb;
         "SLN", fun _ -> test3 calcSln slnEx testCosts testSalvages testLives trySln;
         "SYD", fun _ -> test4 calcSyd sydEx testCosts testSalvages testLives testPeriods trySyd;
