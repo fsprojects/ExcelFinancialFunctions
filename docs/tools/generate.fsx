@@ -4,9 +4,16 @@
 // --------------------------------------------------------------------------------------
 
 // Binaries that have XML documentation (in a corresponding generated XML file)
-let referenceBinaries = [ "ExcelFinancialFunctions.dll" ]
+// Any binary output / copied to bin/projectName/projectName.dll will
+// automatically be added as a binary to generate API docs for.
+// for binaries output to root bin folder please add the filename only to the 
+// referenceBinaries list below in order to generate documentation for the binaries.
+// (This is the original behaviour of ProjectScaffold prior to multi project support)
+let referenceBinaries = []
 // Web site location for the generated documentation
-let website = "http://fsprojects.github.io/ExcelFinancialFunctions"
+let website = "/ExcelFinancialFunctions"
+
+let githubLink = "http://github.com/fsprojects/ExcelFinancialFunctions"
 
 // Specify more information about your project
 let info =
@@ -14,21 +21,15 @@ let info =
     "project-author", "Luca Bolognese"
     "project-summary", "A .NET library that provides the full set of financial functions from Excel."
     "project-github", "http://github.com/fsprojects/ExcelFinancialFunctions"
-    "project-nuget", "http://nuget.com/packages/ExcelFinancialFunctions" ]
+    "project-nuget", "http://nuget.org/packages/ExcelFinancialFunctions" ]
 
 // --------------------------------------------------------------------------------------
 // For typical project, no changes are needed below
 // --------------------------------------------------------------------------------------
 
-#I "../../packages/FSharp.Formatting.2.3.5-beta/lib/net40"
-#I "../../packages/FSharp.Compiler.Service.0.0.11-alpha/lib/net40"
-#I "../../packages/RazorEngine.3.3.0/lib/net40/"
-#r "../../packages/Microsoft.AspNet.Razor.2.0.30506.0/lib/net40/System.Web.Razor.dll"
-#r "../../packages/FAKE/tools/FakeLib.dll"
-#r "RazorEngine.dll"
-#r "FSharp.Literate.dll"
-#r "FSharp.CodeFormat.dll"
-#r "FSharp.MetadataFormat.dll"
+#load "../../packages/build/FSharp.Formatting/FSharp.Formatting.fsx"
+#I "../../packages/build/FAKE/tools/"
+#r "FakeLib.dll"
 open Fake
 open System.IO
 open Fake.FileHelper
@@ -49,13 +50,21 @@ let content    = __SOURCE_DIRECTORY__ @@ "../content"
 let output     = __SOURCE_DIRECTORY__ @@ "../output"
 let files      = __SOURCE_DIRECTORY__ @@ "../files"
 let templates  = __SOURCE_DIRECTORY__ @@ "templates"
-let formatting = __SOURCE_DIRECTORY__ @@ "../../packages/FSharp.Formatting.2.3.5-beta/"
-let docTemplate = formatting @@ "templates/docpage.cshtml"
+let formatting = __SOURCE_DIRECTORY__ @@ "../../packages/build/FSharp.Formatting/"
+let docTemplate = "docpage.cshtml"
 
 // Where to look for *.csproj templates (in this order)
-let layoutRoots =
-  [ templates; formatting @@ "templates"
-    formatting @@ "templates/reference" ]
+let layoutRootsAll = new System.Collections.Generic.Dictionary<string, string list>()
+layoutRootsAll.Add("en",[ templates; formatting @@ "templates"
+                          formatting @@ "templates/reference" ])
+subDirectories (directoryInfo templates)
+|> Seq.iter (fun d ->
+                let name = d.Name
+                if name.Length = 2 || name.Length = 3 then
+                    layoutRootsAll.Add(
+                            name, [templates @@ name
+                                   formatting @@ "templates"
+                                   formatting @@ "templates/reference" ]))
 
 // Copy static files and CSS + JS from F# Formatting
 let copyFiles () =
@@ -64,26 +73,73 @@ let copyFiles () =
   CopyRecursive (formatting @@ "styles") (output @@ "content") true 
     |> Log "Copying styles and scripts: "
 
+let binaries =
+    let manuallyAdded = 
+        referenceBinaries 
+        |> List.map (fun b -> bin @@ b)
+    
+    let conventionBased = 
+        directoryInfo bin 
+        |> subDirectories
+        |> Array.map (fun d -> d.FullName @@ (sprintf "%s.dll" d.Name))
+        |> List.ofArray
+
+    conventionBased @ manuallyAdded
+
+let libDirs =
+    let conventionBasedbinDirs =
+        directoryInfo bin 
+        |> subDirectories
+        |> Array.map (fun d -> d.FullName)
+        |> List.ofArray
+
+    conventionBasedbinDirs @ [bin]
+
 // Build API reference from XML comments
 let buildReference () =
   CleanDir (output @@ "reference")
-  for lib in referenceBinaries do
-    MetadataFormat.Generate
-      ( bin @@ lib, output @@ "reference", layoutRoots, 
-        parameters = ("root", root)::info,
-        sourceRepo = "https://github.com/fsprojects/ExcelFinancialFunctions/tree/master/src/",
-        sourceFolder = @"..\..\src", publicOnly = true)
+  MetadataFormat.Generate
+    ( binaries, output @@ "reference", layoutRootsAll.["en"],
+      parameters = ("root", root)::info,
+      sourceRepo = githubLink @@ "tree/master",
+      sourceFolder = __SOURCE_DIRECTORY__ @@ ".." @@ "..",
+      publicOnly = true,libDirs = libDirs )
 
 // Build documentation from `fsx` and `md` files in `docs/content`
 let buildDocumentation () =
-  let subdirs = Directory.EnumerateDirectories(content, "*", SearchOption.AllDirectories)
-  for dir in Seq.append [content] subdirs do
-    let sub = if dir.Length > content.Length then dir.Substring(content.Length + 1) else "."
+
+  // First, process files which are placed in the content root directory.
+
+  Literate.ProcessDirectory
+    ( content, docTemplate, output, replacements = ("root", root)::info,
+      layoutRoots = layoutRootsAll.["en"],
+      generateAnchors = true,
+      processRecursive = false)
+
+  // And then process files which are placed in the sub directories
+  // (some sub directories might be for specific language).
+
+  let subdirs = Directory.EnumerateDirectories(content, "*", SearchOption.TopDirectoryOnly)
+  for dir in subdirs do
+    let dirname = (new DirectoryInfo(dir)).Name
+    let layoutRoots =
+        // Check whether this directory name is for specific language
+        let key = layoutRootsAll.Keys
+                  |> Seq.tryFind (fun i -> i = dirname)
+        match key with
+        | Some lang -> layoutRootsAll.[lang]
+        | None -> layoutRootsAll.["en"] // "en" is the default language
+
     Literate.ProcessDirectory
-      ( dir, docTemplate, output @@ sub, replacements = ("root", root)::info,
-        layoutRoots = layoutRoots )
+      ( dir, docTemplate, output @@ dirname, replacements = ("root", root)::info,
+        layoutRoots = layoutRoots,
+        generateAnchors = true )
 
 // Generate
 copyFiles()
+#if HELP
 buildDocumentation()
+#endif
+#if REFERENCE
 buildReference()
+#endif

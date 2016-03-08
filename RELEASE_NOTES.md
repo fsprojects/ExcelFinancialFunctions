@@ -15,3 +15,8 @@
 
 #### 2.2.1
 * Price and yield functions now accept rate = 0
+
+#### 2.3
+* Upgrade to VS2015, drop support for older versions
+* Update Fake and switch to Paket
+
