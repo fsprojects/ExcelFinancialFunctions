@@ -6,8 +6,12 @@
 open Fake
 open Fake.Git
 open Fake.AssemblyInfoFile
+open Fake.MSBuildHelper
 open Fake.ReleaseNotesHelper
 open System
+
+// disable parallel build
+MSBuildDefaults <- { MSBuildDefaults with MaxCpuCount = Some (Some 1) }
 
 // Information about the project are used
 //  - for version and project name in generated AssemblyInfo file
@@ -36,6 +40,8 @@ let tags = "excel finance fsharp csharp"
 
 // File system information
 let solutionFile  = "ExcelFinancialFunctions.sln"
+let projectFolder = "src/ExcelFinancialFunctions"
+let testsFolder   = "tests/ExcelFinancialFunctions.Tests"
 
 // Pattern specifying assemblies to be tested using NUnit
 let testAssemblies = "tests/*/bin/*/ExcelFinancialFunctions.Tests.dll"
@@ -81,7 +87,7 @@ Target "AssemblyInfo" (fun _ ->
           (getAssemblyInfoAttributes projectName)
         )
 
-    !! "src/**/*.??proj"
+    !! "src/**/ExcelFinancialFunctions.??proj"
     |> Seq.map getProjectDetails
     |> Seq.iter (fun (projFileName, projectName, folderName, attributes) ->
         match projFileName with
@@ -96,10 +102,8 @@ Target "AssemblyInfo" (fun _ ->
 // But keeps a subdirectory structure for each project in the
 // src folder to support multiple project outputs
 Target "CopyBinaries" (fun _ ->
-    !! "src/**/*.??proj"
-    -- "src/**/*.shproj"
-    |>  Seq.map (fun f -> ((System.IO.Path.GetDirectoryName f) </> "bin/Release", "bin" </> (System.IO.Path.GetFileNameWithoutExtension f)))
-    |>  Seq.iter (fun (fromDir, toDir) -> CopyDir toDir fromDir (fun _ -> true))
+    CopyDir "bin/portable" (projectFolder </> "bin/portable/Release") (fun _ -> true)
+    CopyDir "bin" (projectFolder </> "bin/Release") (fun _ -> true)
 )
 
 // --------------------------------------------------------------------------------------
