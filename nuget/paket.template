@@ -10,4 +10,6 @@ tags
     excel, finance, fsharp, csharp 
 files
     ../bin/ExcelFinancialFunctions.* ==> lib/net40
-    ../bin/portable/ExcelFinancialFunctions.* ==> lib/portable-windows8+net45
+    ../bin/portable/ExcelFinancialFunctions.* ==> lib/portable-net45+netcore45+wp8
+dependencies
+    FSharp.Core ~> 4.0.0.1

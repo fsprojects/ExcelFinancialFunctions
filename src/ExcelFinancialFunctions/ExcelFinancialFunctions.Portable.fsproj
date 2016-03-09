@@ -36,13 +36,6 @@
     <DocumentationFile>bin\portable\Release\ExcelFinancialFunctions.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FSharp.Core">
-      <Name>FSharp.Core</Name>
-      <AssemblyName>FSharp.Core.dll</AssemblyName>
-      <HintPath>$(MSBuildExtensionsPath32)\..\Reference Assemblies\Microsoft\FSharp\.NETCore\$(TargetFSharpCoreVersion)\FSharp.Core.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="publicenums.fs" />
     <Compile Include="common.fs" />
     <Compile Include="tvm.fs" />
@@ -56,6 +49,11 @@
     <Compile Include="misc.fs" />
     <Compile Include="wrapperdotnettype.fs" />
     <Compile Include="testpreconditions.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="FSharp.Core">
+      <HintPath>..\..\packages\build\FSharp.Core\lib\portable-net45+netcore45+wp8\FSharp.Core.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">12</MinimumVisualStudioVersion>

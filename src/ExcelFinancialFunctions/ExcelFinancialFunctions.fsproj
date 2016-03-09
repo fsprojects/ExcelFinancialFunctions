@@ -34,6 +34,9 @@
     <DocumentationFile>bin\Release\ExcelFinancialFunctions.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FSharp.Core">
+      <HintPath>..\..\packages\build\FSharp.Core\lib\net40\FSharp.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
