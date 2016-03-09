@@ -15,3 +15,6 @@
 
 #### 2.2.1
 * Price and yield functions now accept rate = 0
+
+#### 2.3
+* Portable version of the library
