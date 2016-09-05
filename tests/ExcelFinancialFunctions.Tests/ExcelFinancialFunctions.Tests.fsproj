@@ -9,8 +9,8 @@
     <OutputType>Library</OutputType>
     <RootNamespace>ExcelFinancialFunctions.Tests</RootNamespace>
     <AssemblyName>ExcelFinancialFunctions.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFSharpCoreVersion>4.3.0.0</TargetFSharpCoreVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFSharpCoreVersion>4.4.0.0</TargetFSharpCoreVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Name>ExcelFinancialFunctions.Tests</Name>
     <TargetFrameworkProfile />
@@ -55,6 +55,7 @@
     <Compile Include="spottests.fs" />
     <Compile Include="crosstests.fs" />
     <Compile Include="concurrencytests.fs" />
+    <Content Include="app.config" />
     <None Include="paket.references" />
   </ItemGroup>
   <ItemGroup>
