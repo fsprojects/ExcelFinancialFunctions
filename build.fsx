@@ -102,7 +102,6 @@ Target "AssemblyInfo" (fun _ ->
 // But keeps a subdirectory structure for each project in the
 // src folder to support multiple project outputs
 Target "CopyBinaries" (fun _ ->
-    CopyDir "bin/portable" (projectFolder </> "bin/portable/Release") (fun _ -> true)
     CopyDir "bin" (projectFolder </> "bin/Release") (fun _ -> true)
 )
 

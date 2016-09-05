@@ -18,3 +18,6 @@
 
 #### 2.3
 * Portable version of the library
+
+#### 2.4
+* Only build profile 259 portable profile of the library (net40 not needed)
