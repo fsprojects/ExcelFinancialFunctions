@@ -349,10 +349,18 @@ Target "All" DoNothing
   ==> "Build"
   ==> "CopyBinaries"
   ==> "RunTests"
+
+"Build"
+  ==> "CopyBinaries"
   ==> "GenerateReferenceDocs"
   ==> "GenerateDocs"
-  ==> "All"
   =?> ("ReleaseDocs",isLocalBuild)
+
+"RunTests"
+  ==> "All"
+
+"GenerateDocs"
+  ==> "All"
 
 "All"
   ==> "NuGet"
