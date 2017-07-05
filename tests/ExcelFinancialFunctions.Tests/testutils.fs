@@ -61,7 +61,7 @@ module internal TestUtils =
             member x.OnShrink(args, everyShrink) = ()
             member x.OnFinished(name, result) =
                 match result with
-                | TestResult.True data ->
+                | TestResult.True (data, _) ->
                     printfn "%s" (Runner.onFinishedToString name result)
                 | _ -> Assert.Fail(Runner.onFinishedToString name result) }
    

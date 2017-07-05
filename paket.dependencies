@@ -1,9 +1,11 @@
+framework: auto-detect
 source https://nuget.org/api/v2
 
-nuget FSharp.Core ~> 4.0.0.1 redirects: force
+nuget FSharp.Core ~> 4.0.0.1
 
 group Build
   source https://nuget.org/api/v2
+  framework: auto-detect
   
   nuget SourceLink.Fake
   nuget FAKE
@@ -13,6 +15,7 @@ group Build
 
 group Test
   source https://nuget.org/api/v2
+  framework: auto-detect
   
   nuget NUnit ~> 2
   nuget NUnit.Runners ~> 2

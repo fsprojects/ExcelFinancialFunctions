@@ -1,4 +1,5 @@
 group Test
-NUnit
-NUnit.Runners
-FsCheck
+  FSharp.Core
+  NUnit
+  NUnit.Runners
+  FsCheck
