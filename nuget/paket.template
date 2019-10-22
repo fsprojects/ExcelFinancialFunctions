@@ -11,4 +11,4 @@ tags
 files
     ../bin/ExcelFinancialFunctions.* ==> lib/portable-net45+netcore45+wpa81+wp8
 dependencies
-    FSharp.Core ~> 4.0.0.1
+    FSharp.Core >= 4.0.0.1

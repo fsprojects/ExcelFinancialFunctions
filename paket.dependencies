@@ -1,7 +1,7 @@
 framework: auto-detect
 source https://nuget.org/api/v2
 
-nuget FSharp.Core ~> 4.0.0.1
+nuget FSharp.Core >= 4.0.0.1 lowest_matching:true, redirects:force
 
 group Build
   source https://nuget.org/api/v2

@@ -1,13 +1,13 @@
 RESTRICTION: || (== net45) (== portable-net45+win8+wp8+wpa81)
 NUGET
   remote: https://www.nuget.org/api/v2
-    FSharp.Core (4.0.0.1)
+    FSharp.Core (4.0.0.1) - redirects: force
 
 GROUP Build
 RESTRICTION: || (== net45) (== portable-net45+win8+wp8+wpa81)
 NUGET
   remote: https://www.nuget.org/api/v2
-    FAKE (4.62.1)
+    FAKE (4.64.17)
     FSharp.Compiler.Service (2.0.0.6)
     FSharp.Formatting (2.14.4)
       FSharp.Compiler.Service (2.0.0.6)
@@ -25,7 +25,7 @@ NUGET
     SourceLink.Fake (1.1)
 GITHUB
   remote: fsharp/FAKE
-    modules/Octokit/Octokit.fsx (b5933798c1944051bf358a460fcdc8ffbd678dfc)
+    modules/Octokit/Octokit.fsx (0515d2c964b6da3abec3f6961a6aefe91e8283b0)
       Octokit (>= 0.20)
 GROUP Test
 RESTRICTION: || (== net45) (== portable-net45+win8+wp8+wpa81)
