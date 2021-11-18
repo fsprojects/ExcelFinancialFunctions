@@ -5,13 +5,20 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <WarnOn>3390;$(WarnOn)</WarnOn>
-    <PackageId>ExcelFinancialFunctions</PackageId>
+    <Title>ExcelFinancialFunctions</Title>
     <AssemblyTitle>ExcelFinancialFunctions</AssemblyTitle>
     <Product>ExcelFinancialFunctions</Product>
     <Description>A .NET Standard library that provides the full set of financial functions from Excel.</Description>
-    <Version>2.4.1</Version>
+    <Authors>Luca Bolognese</Authors>
+    <RepositoryUrl>https://github.com/fsprojects/ExcelFinancialFunctions.git</RepositoryUrl>
+    <PackageId>ExcelFinancialFunctions</PackageId>
+    <PackageVersion>2.4.1</PackageVersion>
     <FileVersion>2.4.1</FileVersion>
     <AssemblyVersion>2.4.1</AssemblyVersion>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageProjectUrl>http://fsprojects.github.io/ExcelFinancialFunctions</PackageProjectUrl>
+    <PackageTags>excel;finance;fsharp;csharp</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +35,7 @@
     <Compile Include="tbill.fs" />
     <Compile Include="testpreconditions.fs" />
     <Compile Include="wrapperdotnettype.fs" />
+    <None Include="..\..\docs\files\img\logo.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
