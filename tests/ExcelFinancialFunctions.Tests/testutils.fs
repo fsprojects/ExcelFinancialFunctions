@@ -33,7 +33,9 @@ module internal TestUtils =
         let _ = (^a: (static member TryParse: string * byref< ^a > -> bool) (str, &res))
         res
 
-    let inline parseArray (str: string) = str.Split [| ';' |] |> Array.map parse
+    let inline parseArray (str: string) = str.Split [| ';' |] |> Array.map Double.Parse
+
+    let inline parseDateArray (str: string) = str.Split [| ';' |] |> Array.map DateTime.Parse
 
     // universal parse methods for function arguments and result
     let inline parse3 [| a; b; c |] =

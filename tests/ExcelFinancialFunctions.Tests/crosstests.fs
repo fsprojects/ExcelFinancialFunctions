@@ -168,5 +168,5 @@ module CrossTests =
         
     [<Test>]
     let xirr() = runTests "xirr" (fun [| cfs; dates; guess; res |] ->
-        (parseArray cfs, parseArray dates, parse guess), parse res) Financial.XIrr
+        (parseArray cfs, parseDateArray dates, parse guess), parse res) Financial.XIrr
   
