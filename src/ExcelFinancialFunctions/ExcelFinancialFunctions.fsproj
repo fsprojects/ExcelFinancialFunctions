@@ -3,18 +3,26 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <WarnOn>3390;$(WarnOn)</WarnOn>
+    <PackageId>ExcelFinancialFunctions</PackageId>
+    <AssemblyTitle>ExcelFinancialFunctions</AssemblyTitle>
+    <Product>ExcelFinancialFunctions</Product>
+    <Description>A .NET Standard library that provides the full set of financial functions from Excel.</Description>
+    <Version>2.4.1</Version>
+    <FileVersion>2.4.1</FileVersion>
+    <AssemblyVersion>2.4.1</AssemblyVersion>
   </PropertyGroup>
 
   <ItemGroup>
-	<Compile Include="publicenums.fs" />
-	<Compile Include="common.fs" />
-	<Compile Include="tvm.fs" />
-	<Compile Include="loan.fs" />
-	<Compile Include="irr.fs" />
-	<Compile Include="daycountbasis.fs" />
-	<Compile Include="bonds.fs" />
-	<Compile Include="depreciation.fs" />
+    <Compile Include="publicenums.fs" />
+    <Compile Include="common.fs" />
+    <Compile Include="tvm.fs" />
+    <Compile Include="loan.fs" />
+    <Compile Include="irr.fs" />
+    <Compile Include="daycountbasis.fs" />
+    <Compile Include="bonds.fs" />
+    <Compile Include="depreciation.fs" />
     <Compile Include="misc.fs" />
     <Compile Include="oddbonds.fs" />
     <Compile Include="tbill.fs" />
