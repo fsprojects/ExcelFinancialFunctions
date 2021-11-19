@@ -1,39 +1,26 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>f6239fd3-e210-45b1-86b0-59ee67cb7ddb</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <RootNamespace>Excel.FinancialFunctions</RootNamespace>
-    <AssemblyName>ExcelFinancialFunctions</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Profile259</TargetFrameworkProfile>
-    <TargetProfile>netcore</TargetProfile>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Name>ExcelFinancialFunctions.Portable</Name>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <WarnOn>3390;$(WarnOn)</WarnOn>
+    <Title>ExcelFinancialFunctions</Title>
+    <AssemblyTitle>ExcelFinancialFunctions</AssemblyTitle>
+    <Product>ExcelFinancialFunctions</Product>
+    <Description>A .NET Standard library that provides the full set of financial functions from Excel.</Description>
+    <Authors>Luca Bolognese</Authors>
+    <RepositoryUrl>https://github.com/fsprojects/ExcelFinancialFunctions.git</RepositoryUrl>
+    <PackageId>ExcelFinancialFunctions</PackageId>
+    <PackageVersion>2.4.1</PackageVersion>
+    <FileVersion>2.4.1</FileVersion>
+    <AssemblyVersion>2.4.1</AssemblyVersion>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageProjectUrl>http://fsprojects.github.io/ExcelFinancialFunctions</PackageProjectUrl>
+    <PackageTags>excel;finance;fsharp;csharp</PackageTags>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <Tailcalls>false</Tailcalls>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Debug\ExcelFinancialFunctions.XML</DocumentationFile>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <Tailcalls>true</Tailcalls>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <WarningLevel>3</WarningLevel>
-    <DocumentationFile>bin\Release\ExcelFinancialFunctions.XML</DocumentationFile>
-  </PropertyGroup>
+
   <ItemGroup>
     <Compile Include="publicenums.fs" />
     <Compile Include="common.fs" />
@@ -43,34 +30,12 @@
     <Compile Include="daycountbasis.fs" />
     <Compile Include="bonds.fs" />
     <Compile Include="depreciation.fs" />
-    <Compile Include="tbill.fs" />
-    <Compile Include="oddbonds.fs" />
     <Compile Include="misc.fs" />
-    <Compile Include="wrapperdotnettype.fs" />
+    <Compile Include="oddbonds.fs" />
+    <Compile Include="tbill.fs" />
     <Compile Include="testpreconditions.fs" />
+    <Compile Include="wrapperdotnettype.fs" />
+    <None Include="..\..\docs\files\img\logo.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
-  <PropertyGroup>
-    <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">12</MinimumVisualStudioVersion>
-  </PropertyGroup>
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\FSharp\Microsoft.Portable.FSharp.Targets" />
-  <Choose>
-    <When Condition="$(TargetFrameworkIdentifier) == '.NETFramework' And $(TargetFrameworkVersion) == 'v4.5'">
-      <ItemGroup>
-        <Reference Include="FSharp.Core">
-          <HintPath>..\..\packages\FSharp.Core\lib\net40\FSharp.Core.dll</HintPath>
-          <Private>True</Private>
-          <Paket>True</Paket>
-        </Reference>
-      </ItemGroup>
-    </When>
-    <When Condition="$(TargetFrameworkProfile) == 'Profile259'">
-      <ItemGroup>
-        <Reference Include="FSharp.Core">
-          <HintPath>..\..\packages\FSharp.Core\lib\portable-net45+netcore45+wpa81+wp8\FSharp.Core.dll</HintPath>
-          <Private>True</Private>
-          <Paket>True</Paket>
-        </Reference>
-      </ItemGroup>
-    </When>
-  </Choose>
+
 </Project>
