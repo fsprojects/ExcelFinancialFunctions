@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ExcelFinancialFunctions", "src\ExcelFinancialFunctions\ExcelFinancialFunctions.fsproj", "{8853070C-D0B3-4DE6-B80B-B1D10F839359}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ExcelFinancialFunctions", "src\ExcelFinancialFunctions\ExcelFinancialFunctions.fsproj", "{8853070C-D0B3-4DE6-B80B-B1D10F839359}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{7F0B1813-150B-4B30-8872-625C37BD67D4}"
 EndProject
@@ -31,7 +31,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{499DEF1A-038
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{A38472EB-1686-402D-8619-EC2BA407C111}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ExcelFinancialFunctions.Tests", "tests\ExcelFinancialFunctions.Tests\ExcelFinancialFunctions.Tests.fsproj", "{17FE313F-5304-448C-892E-451E17EEEE83}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ExcelFinancialFunctions.Tests", "tests\ExcelFinancialFunctions.Tests\ExcelFinancialFunctions.Tests.fsproj", "{17FE313F-5304-448C-892E-451E17EEEE83}"
+EndProject
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "ExcelFinancialFunctions.ConsoleTests", "tests\ExcelFinancialFunctions.ConsoleTests\ExcelFinancialFunctions.ConsoleTests.fsproj", "{EAF937EA-E9E0-4D8D-8DDF-8430CC47CD2F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,6 +49,10 @@ Global
 		{17FE313F-5304-448C-892E-451E17EEEE83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17FE313F-5304-448C-892E-451E17EEEE83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17FE313F-5304-448C-892E-451E17EEEE83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAF937EA-E9E0-4D8D-8DDF-8430CC47CD2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF937EA-E9E0-4D8D-8DDF-8430CC47CD2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF937EA-E9E0-4D8D-8DDF-8430CC47CD2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF937EA-E9E0-4D8D-8DDF-8430CC47CD2F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -56,5 +62,9 @@ Global
 		{5E196AFF-81D3-4BD5-964A-5A9E642CD104} = {7F0B1813-150B-4B30-8872-625C37BD67D4}
 		{6FEE0C58-7CBD-4091-8D56-55AA733E1131} = {7F0B1813-150B-4B30-8872-625C37BD67D4}
 		{17FE313F-5304-448C-892E-451E17EEEE83} = {A38472EB-1686-402D-8619-EC2BA407C111}
+		{EAF937EA-E9E0-4D8D-8DDF-8430CC47CD2F} = {A38472EB-1686-402D-8619-EC2BA407C111}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F7A0269D-790B-4C1C-807C-7415B62CD59B}
 	EndGlobalSection
 EndGlobal
