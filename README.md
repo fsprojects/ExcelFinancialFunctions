@@ -44,9 +44,7 @@ _(Note, the original version of the library is still available [here.](http://co
 
 #### Build status
 
-[![Build status](https://ci.appveyor.com/api/projects/status/6o24brtng2xtfm3b/branch/master?svg=true)](https://ci.appveyor.com/project/luajalla/excelfinancialfunctions/branch/master)
-
-[![Build Status](https://travis-ci.org/fsprojects/ExcelFinancialFunctions.svg?branch=master)](https://travis-ci.org/fsprojects/ExcelFinancialFunctions) 
+[![Build and Test](https://github.com/fsprojects/ExcelFinancialFunctions/actions/workflows/dotnet.yml/badge.svg)](https://github.com/fsprojects/ExcelFinancialFunctions/actions/workflows/dotnet.yml)
 
 #### Maintainer(s)
 
