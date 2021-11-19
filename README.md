@@ -48,7 +48,6 @@ _(Note, the original version of the library is still available [here.](http://co
 
 #### Maintainer(s)
 
-- [@luajalla](https://github.com/luajalla)
-- [@cpell](https://github.com/cpell)
+- [@jcoliz](https://github.com/jcoliz)
 
 The default maintainer account for projects under "fsprojects" is [@fsprojectsgit](https://github.com/fsprojectsgit) - F# Community Project Incubation Space (repo management)
