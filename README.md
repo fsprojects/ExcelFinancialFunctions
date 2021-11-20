@@ -10,7 +10,7 @@ This is a .NET Standard library that provides the full set of financial function
 We replicate the results Excel would produce in every situation,
 even in cases where we might disagree with Excel\'s approach. Please have a look at the [Compatibility](http://fsprojects.github.io/ExcelFinancialFunctions/compatibility.html) page for more detail on this topic.
 
-Microsoft\'s official documentation on [Excel Functions](https://support.microsoft.com/en-us/office/Formulas-and-functions-294d9486-b332-48ed-b489-abe7d0f9eda9) is the best place to learn more about how the functions should work.
+Microsoft\'s official documentation on [Excel Functions](https://support.microsoft.com/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb) is the best place to learn more about how the functions should work. The scope for this library is the full set of functions in the "Financial Functions" category.
 
 ### Thoroughly tested
 
@@ -24,7 +24,7 @@ As of last count, the library is validated against 199,252 test cases.
 There are two notable areas where we judged that Excel was sufficiently incorrect
 such that we needed to deviate from the primary goal of matching Excel precisely.
 
-THe first is the coupDays algorithm. Excel doesn't respect the following:
+The first is the coupDays algorithm. Excel doesn't respect the following:
 
 ```
 coupDays = coupDaysBS + coupDaysNC.
