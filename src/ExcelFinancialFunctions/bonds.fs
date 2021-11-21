@@ -148,7 +148,7 @@ module internal Bonds =
         accrIntM issue settlement rate par basis
     let calcAccrInt issue firstInterest settlement rate par (frequency:Frequency) basis (calcMethod:AccrIntCalcMethod) =
         (settlement > issue)            |> elseThrow "settlement must be after issue"
-        (firstInterest > settlement)    |> elseThrow "firstInterest must be after settlement"
+        (firstInterest >= settlement)   |> elseThrow "firstInterest must be after settlement"
         (rate > 0.)                     |> elseThrow "rate must be more than 0"
         (par > 0.)                      |> elseThrow "par must be more than 0"
         accrInt issue firstInterest settlement rate par frequency basis calcMethod
