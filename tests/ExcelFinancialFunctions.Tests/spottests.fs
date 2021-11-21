@@ -16,6 +16,13 @@ module SpotTests =
         |> shouldEqual (sprintf "YieldIssue8(%A)" param) -0.67428578540657702
 
     [<Test>]
+    let XirrIssue27() =
+        let values = [ -177900000.; 8799805.85 ] 
+        let dates = [ DateTime(2020,7,3); DateTime(2021,2,25) ]
+        Financial.XIrr (values, dates)
+        |> shouldEqual (sprintf "XirrIssue27(%A,%A)" values dates) -0.990247691899517
+
+    [<Test>]
     let spotYield() =
         let param = 
             DateTime(2008, 2, 15), DateTime(2016, 11, 15), 0.0575, 95.04287, 100.0,
