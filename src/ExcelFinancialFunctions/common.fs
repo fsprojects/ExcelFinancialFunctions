@@ -112,7 +112,7 @@ module internal Common =
     // If the result is sensible (it exist and has the same sign as guess), then return it, else try bisection.
     // I'm sure more complex way to pick algos exist (i.e. Brent's method). But I favor simplicity here ...         
     let findRoot f guess =
-        let precision = 0.0000001 // Excel precision on this, from docs
+        let precision = 0.000001 // Excel precision on this, from docs
         let newtValue = newton f guess 0 precision
         if newtValue.IsSome && sign guess = sign newtValue.Value
         then newtValue.Value
