@@ -8,6 +8,12 @@ module SpotTests =
     open System 
     open Excel.FinancialFunctions
     open TestPreconditions
+    
+    [<Test>]
+    let YieldIssue8() =
+        let param = DateTime(2015,9,21), DateTime(2015,10,15), 0.04625, 105.124, 100. , Frequency.SemiAnnual, DayCountBasis.UsPsa30_360
+        Financial.Yield param
+        |> shouldEqual (sprintf "YieldIssue8(%A)" param) -0.67428578540657702
 
     [<Test>]
     let spotYield() =
