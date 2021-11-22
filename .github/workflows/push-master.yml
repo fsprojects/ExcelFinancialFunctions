@@ -18,7 +18,7 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore -target:$TARGETS
     - name: Build
-      run: dotnet build -target:$TARGETS --no-restore
+      run: dotnet build -target:$TARGETS --no-restore --configuration=Release
     - name: Run Tests
       run: dotnet test -target:$TARGETS --no-build --verbosity normal
         - name: Restore tools
