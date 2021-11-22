@@ -1,0 +1,35 @@
+name: Build, Test, and Deploy
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      TARGETS: "src\\ExcelFinancialFunctions;tests\\ExcelFinancialFunctions_Tests"
+    steps:
+    - uses: actions/checkout@v2
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.x
+    - name: Restore dependencies
+      run: dotnet restore -target:$TARGETS
+    - name: Build
+      run: dotnet build -target:$TARGETS --no-restore
+    - name: Run Tests
+      run: dotnet test -target:$TARGETS --no-build --verbosity normal
+        - name: Restore tools
+      run: dotnet tool restore
+    - name: Run fsdocs
+      run: dotnet fsdocs build --eval --strict --properties Configuration=Release
+    - name: Deploy docs
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./output
+        publish_branch: gh-pages
+        force_orphan: true
+      
