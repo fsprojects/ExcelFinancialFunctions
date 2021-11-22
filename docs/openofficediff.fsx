@@ -1,5 +1,5 @@
 (*** hide ***)
-#I "../../src/ExcelFinancialFunctions/bin/Release/netstandard2.0"
+#I "../src/ExcelFinancialFunctions/bin/Release/netstandard2.0"
 #r "ExcelFinancialFunctions.dll"
 
 open System
