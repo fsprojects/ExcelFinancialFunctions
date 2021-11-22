@@ -35,7 +35,7 @@
     <Compile Include="tbill.fs" />
     <Compile Include="testpreconditions.fs" />
     <Compile Include="wrapperdotnettype.fs" />
-    <None Include="..\..\docs\files\img\logo.png" Pack="true" PackagePath="\"/>
+    <None Include="..\..\docs\img\logo.png" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
