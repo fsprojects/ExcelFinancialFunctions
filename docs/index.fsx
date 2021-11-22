@@ -1,9 +1,10 @@
 (*** hide ***)
 // This block of code is omitted in the generated HTML documentation. Use 
 // it to define helpers that you do not want to show in the documentation.
-#I "../../bin"
+#I "../../src/ExcelFinancialFunctions/bin/Release/netstandard2.0"
 
 (**
+
 Excel Financial Functions
 ===================
 
@@ -15,16 +16,16 @@ with the same behaviour.
 Note though that this is not a wrapper over the Excel library; the functions have been 
 re-implemented in managed code so that you do not need to have Excel installed to use this library.
 
-<div class="row">
-  <div class="span1"></div>
-  <div class="span6">
-    <div class="well well-small" id="nuget">
-      ExcelFinancialFunctions library can be <a href="https://nuget.org/packages/ExcelFinancialFunctions">installed from NuGet</a>:
-      <pre>PM> Install-Package ExcelFinancialFunctions</pre>
-    </div>
-  </div>
-  <div class="span1"></div>
-</div>
+The package is available on <a href="https://nuget.org/packages/ExcelFinancialFunctions">NuGet</a>. [![NuGet Status](//img.shields.io/nuget/v/ExcelFinancialFunctions?style=flat)](https://www.nuget.org/packages/ExcelFinancialFunctions/)
+
+You can also use `ExcelFinancialFunctions` in [dotnet interactive](https://github.com/dotnet/interactive) 
+notebooks, in [Visual Studio Code](https://code.visualstudio.com/) 
+or [Jupyter](https://jupyter.org/), or in F# scripts (`.fsx` files), 
+by referencing the package as follows:
+
+    // Use one of the following two lines
+    #r "nuget: ExcelFinancialFunctions" // Use the latest version
+    #r "nuget: ExcelFinancialFunctions,{{fsdocs-package-version}}" // Use a specific version   
 
 Example
 -------
@@ -47,7 +48,7 @@ Samples & documentation
 -----------------------
 
 The library comes with comprehensible documentation. The tutorials and articles are
-automatically generated from `*.fsx` files in [the content folder][content]. The API 
+automatically generated from `*.fsx` files in [the docs folder][docs]. The API 
 reference is automatically generated from Markdown comments in the library implementation.
 
 * [API Reference](reference/index.html) contains automatically generated documentation for all types, modules
