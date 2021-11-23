@@ -1,4 +1,4 @@
-name: Build, Test, and Deploy
+name: Build+Test+Docs
 
 on:
   push:
@@ -21,7 +21,7 @@ jobs:
       run: dotnet build -target:$TARGETS --no-restore --configuration=Release
     - name: Run Tests
       run: dotnet test -target:$TARGETS --no-build --verbosity normal
-        - name: Restore tools
+    - name: Restore tools
       run: dotnet tool restore
     - name: Run fsdocs
       run: dotnet fsdocs build --eval --strict --properties Configuration=Release
