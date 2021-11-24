@@ -14,13 +14,13 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.x
+        dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore -target:$TARGETS
     - name: Build
       run: dotnet build -target:$TARGETS --no-restore --configuration=Release
     - name: Run Tests
-      run: dotnet test -target:$TARGETS --no-build --verbosity normal
+      run: dotnet test -target:$TARGETS --no-build --configuration=Release --verbosity normal
     - name: Restore tools
       run: dotnet tool restore
     - name: Run fsdocs
