@@ -10,7 +10,8 @@
     <Product>ExcelFinancialFunctions</Product>
     <Description>A .NET Standard library that provides the full set of financial functions from Excel.</Description>
     <Authors>Luca Bolognese</Authors>
-    <RepositoryUrl>https://github.com/fsprojects/ExcelFinancialFunctions.git</RepositoryUrl>
+    <RepositoryUrl>https://github.com/fsprojects/ExcelFinancialFunctions</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
     <PackageId>ExcelFinancialFunctions</PackageId>
     <PackageVersion>2.4.1</PackageVersion>
     <FileVersion>2.4.1</FileVersion>
