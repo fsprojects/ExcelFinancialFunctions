@@ -158,6 +158,11 @@ module internal Bonds =
         (yld > 0.)                      |> elseThrow "yld must be more than 0"
         (redemption > 0.)               |> elseThrow "redemption must be more than 0"
         price settlement maturity rate yld redemption (float (int frequency)) basis
+    let calcPriceAllowNegativeYield settlement maturity rate yld redemption (frequency:Frequency) basis =
+        (maturity > settlement)         |> elseThrow "maturity must be after settlement"
+        (rate >= 0.)                    |> elseThrow "rate must not be negative"
+        (redemption > 0.)               |> elseThrow "redemption must be more than 0"
+        price settlement maturity rate yld redemption (float (int frequency)) basis
     let calcYield settlement maturity rate pr redemption (frequency:Frequency) basis =
         (maturity > settlement)         |> elseThrow "maturity must be after settlement"
         (rate >= 0.)                    |> elseThrow "rate must not be negative"

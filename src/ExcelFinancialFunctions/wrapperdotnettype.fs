@@ -233,6 +233,12 @@ type Financial =
     static member Price (settlement, maturity, rate, yld, redemption, frequency, basis) =
         calcPrice settlement maturity rate yld redemption frequency basis
     
+    /// The price per $100 face value of a security that pays periodic interest
+    /// This is the same calculation as "Price", but allows a negative yield. Excel does not allow negative yield, so this is an addition to the Excel-
+    /// compatible UI
+    static member PriceAllowNegativeYield (settlement, maturity, rate, yld, redemption, frequency, basis) =
+        calcPriceAllowNegativeYield settlement maturity rate yld redemption frequency basis
+
     /// <a target="_blank" href="https://support.microsoft.com/en-us/office/pricedisc-function-d06ad7c1-380e-4be7-9fd9-75e3079acfd3">PRICEDISC function</a>
     /// The price per $100 face value of a discounted security 
     static member PriceDisc (settlement, maturity, discount, redemption, basis) =
