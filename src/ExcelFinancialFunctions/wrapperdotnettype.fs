@@ -18,30 +18,36 @@ open Excel.FinancialFunctions.OddBonds
 
 /// A wrapper class to expose the Excel financial functions API to .NET clients
 type Financial =
+    /// <a target="_blank" href="https://support.microsoft.com/en-us/office/accrint-function-fe45d089-6722-4fb3-9379-e1f911d8dc74">ACCRINT function</a>
     /// The accrued interest for a security that pays periodic interest
-    /// <seealso href="https://support.microsoft.com/en-us/office/accrint-function-fe45d089-6722-4fb3-9379-e1f911d8dc74">ACCRINT function</seealso>
     static member AccrInt (issue, firstInterest, settlement, rate, par, frequency, basis, calcMethod) =
         calcAccrInt issue firstInterest settlement rate par frequency basis calcMethod
-    /// The accrued interest for a security that pays periodic interest ([learn more](http://office.microsoft.com/en-us/excel/HP052089791033.aspx))
+
+    /// <a target="_blank" href="https://support.microsoft.com/en-us/office/accrint-function-fe45d089-6722-4fb3-9379-e1f911d8dc74">ACCRINT function</a>
+    /// The accrued interest for a security that pays periodic interest, using "FromIssueToSettlement" calculation method
     static member AccrInt (issue, firstInterest, settlement, rate, par, frequency, basis) = 
         calcAccrInt issue firstInterest settlement rate par frequency basis AccrIntCalcMethod.FromIssueToSettlement
     
-    /// The accrued interest for a security that pays interest at maturity ([learn more](http://office.microsoft.com/en-us/excel/HP052089801033.aspx))
+    /// <a target="_blank" href="https://support.microsoft.com/en-us/office/accrintm-function-f62f01f9-5754-4cc4-805b-0e70199328a7">ACCRINTM function</a>
+    /// The accrued interest for a security that pays interest at maturity
     static member AccrIntM (issue, settlement, rate, par, basis) =
         calcAccrIntM issue settlement rate par basis
     
-    /// The depreciation for each accounting period by using a depreciation coefficient ([learn more](http://office.microsoft.com/en-us/excel/HP052089841033.aspx))  
+    /// <a target="_blank" href="https://support.microsoft.com/en-us/office/amordegrc-function-a14d0ca1-64a4-42eb-9b3d-b0dededf9e51">AMORDEGRC function</a>
+    /// The depreciation for each accounting period by using a depreciation coefficient
     /// ExcelCompliant is used because Excel stores 13 digits. AmorDegrc algorithm rounds numbers  
     /// and returns different results unless the numbers get rounded to 13 digits before rounding them.  
     /// I.E. 22.49999999999999 is considered 22.5 by Excel, but 22.4 by the .NET framework    
     static member AmorDegrc (cost, datePurchased, firstPeriod, salvage, period, rate, basis, excelCompliant) =
         calcAmorDegrc cost datePurchased firstPeriod salvage period rate basis excelCompliant
     
-    /// The depreciation for each accounting period ([learn more](http://office.microsoft.com/en-us/excel/HP052089851033.aspx))
+    /// <a target="_blank" href="https://support.microsoft.com/en-us/office/excel-functions-by-category-5f91f4e9-7b42-46d2-9bd1-63f26a86c0eb">AMORLINC function</a>
+    /// The depreciation for each accounting period
     static member AmorLinc (cost, datePurchased, firstPeriod, salvage, period, rate, basis) =
         calcAmorLinc cost datePurchased firstPeriod salvage period rate basis
 
-    /// The number of days from the beginning of the coupon period to the settlement date ([learn more](http://office.microsoft.com/en-us/excel/HP052090301033.aspx))
+    /// <a target="_blank" href="https://support.microsoft.com/en-us/office/coupdaybs-function-eb9a8dfb-2fb2-4c61-8e5d-690b320cf872">COUPDAYBS function</a>
+    /// The number of days from the beginning of the coupon period to the settlement date
     static member CoupDaysBS (settlement, maturity, frequency, basis) =
         calcCoupDaysBS settlement maturity frequency basis
 
