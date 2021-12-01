@@ -1,0 +1,30 @@
+name: Release
+
+on:
+  release:
+    types:
+      - published
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      FSPROJ: "src\\ExcelFinancialFunctions\\ExcelFinancialFunctions.fsproj"
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 5.0.x
+      - name: Restore dependencies
+        run: dotnet restore $FSPROJ
+      - name: Build Release
+        run: dotnet build $FSPROJ /p:Configuration=Release --no-restore --verbosity normal
+      - name: Pack
+        run: dotnet pack $FSPROJ /p:Configuration=Release /p:GitVersion=${GITHUB_REF#refs/tags/} /p:ReleaseNotes="${{ github.event.release.body }}" --no-build --verbosity normal
+
+# Need NUGET_ORG_TOKEN_2020 secret to do this last part
+#      - name: Publish NuGets (if this version not published before)
+#        run: dotnet nuget push **\*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_ORG_TOKEN_2020 }} --skip-duplicate
