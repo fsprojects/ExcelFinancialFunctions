@@ -17,10 +17,12 @@ jobs:
         dotnet-version: 5.0.x
     - name: Restore dependencies
       run: dotnet restore -target:$TARGETS
-    - name: Build
+    - name: Build Debug
+      run: dotnet build -target:$TARGETS --no-restore
+    - name: Run Debug Tests (Release tests fail to discover)
+      run: dotnet test -target:$TARGETS --no-build --verbosity normal
+    - name: Build Release
       run: dotnet build -target:$TARGETS --no-restore --configuration=Release
-    - name: Run Tests
-      run: dotnet test -target:$TARGETS --no-build --configuration=Release --verbosity normal
     - name: Restore tools
       run: dotnet tool restore
     - name: Run fsdocs
