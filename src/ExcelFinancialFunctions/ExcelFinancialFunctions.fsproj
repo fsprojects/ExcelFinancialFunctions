@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <WarnOn>3390;$(WarnOn)</WarnOn>
     <Title>ExcelFinancialFunctions</Title>
     <AssemblyTitle>ExcelFinancialFunctions</AssemblyTitle>
@@ -13,9 +13,9 @@
     <RepositoryUrl>https://github.com/fsprojects/ExcelFinancialFunctions</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageId>ExcelFinancialFunctions</PackageId>
-    <PackageVersion>2.4.1</PackageVersion>
-    <FileVersion>2.4.1</FileVersion>
-    <AssemblyVersion>2.4.1</AssemblyVersion>
+    <Version>$(GitVersion)</Version>
+    <PackageReleaseNotes>$(ReleaseNotes)</PackageReleaseNotes>
+    <PackageReadmeFile>PackageReadmeFile.md</PackageReadmeFile>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <FsDocsLicenseLink>https://github.com/fsprojects/ExcelFinancialFunctions/blob/master/LICENSE.txt</FsDocsLicenseLink>
     <PackageIcon>logo.png</PackageIcon>
@@ -38,6 +38,7 @@
     <Compile Include="testpreconditions.fs" />
     <Compile Include="wrapperdotnettype.fs" />
     <None Include="..\..\docs\img\logo.png" Pack="true" PackagePath="\"/>
+    <None Include="..\..\PackageReadmeFile.md" Pack="true" PackagePath="\"/>    
   </ItemGroup>
 
 </Project>
