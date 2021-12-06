@@ -19,7 +19,7 @@
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <FsDocsLicenseLink>https://github.com/fsprojects/ExcelFinancialFunctions/blob/master/LICENSE.txt</FsDocsLicenseLink>
     <PackageIcon>logo.png</PackageIcon>
-    <PackageProjectUrl>http://fsprojects.github.io/ExcelFinancialFunctions</PackageProjectUrl>
+    <PackageProjectUrl>https://fsprojects.github.io/ExcelFinancialFunctions</PackageProjectUrl>
     <PackageTags>excel;finance;fsharp;csharp</PackageTags>
   </PropertyGroup>
 
