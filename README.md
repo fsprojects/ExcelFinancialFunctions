@@ -103,10 +103,22 @@ We pledge to be overt in our openness, welcoming all people to contribute, and p
 
 The library is available under Apache 2.0. For more information see the [License file](./LICENSE.txt).
 
+## The origin
+
+The original author is [Luca Bolognese](https://github.com/lucabol). His story:
+
+> I coded it the summer my daughter was born 12 years ago while back in Italy for three months. It is one of my first forays into functional programming.
+> 
+> I coded most of them with the sea in front of me. I would bet that it is one of the most Excel-compliant libraries in existence across all languages.
+> 
+> I am happy that the tests still pass! This is a testament to good backward compatibility in the language.
+> 
+> We think this is one of the most Excel compliant libraries in existence because of the extensive test-suite.
+
 ## Maintainers
 
 Current maintainer is [James Coliz](https://github.com/jcoliz).
 
-Original author is [Luca Bolognese](https://github.com/lucabol). Historical maintainers of this project are [Natallie Baikevich](https://github.com/luajalla) and [Chris Pell](https://github.com/jcoliz). And of course, where would we be without [Don Syme](https://github.com/dsyme)?
+Historical maintainers of this project are [Natallie Baikevich](https://github.com/luajalla) and [Chris Pell](https://github.com/jcoliz). And of course, where would we be without [Don Syme](https://github.com/dsyme)?
 
 The default maintainer account for projects under "fsprojects" is [@fsprojectsgit](https://github.com/fsprojectsgit) - F# Community Project Incubation Space (repo management)
