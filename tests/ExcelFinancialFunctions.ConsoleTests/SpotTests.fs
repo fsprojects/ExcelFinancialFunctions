@@ -26,10 +26,13 @@ type SpotTests () =
     let spotTest1 f1 f2 p1 =
         Assert.AreEqual(f1 p1,f2 p1,precision)
     let spotTest2 f1 f2 p1 p2 =
+        // printfn "%A %A %A" p1 p2 (f1 p1 p2)
         Assert.AreEqual(f1 p1 p2,f2 p1 p2,precision)
     let spotTest3 f1 f2 p1 p2 p3 =
+        // printfn "%A %A %A %A" p1 p2 p3 (f1 p1 p2 p3)
         Assert.AreEqual(f1 p1 p2 p3,f2 p1 p2 p3,precision)
     let spotTest4 f1 f2 p1 p2 p3 p4 =
+        // printfn "%A %A %A %A %A" p1 p2 p3 p4 (f1 p1 p2 p3 p4)
         Assert.AreEqual(f1 p1 p2 p3 p4,f2 p1 p2 p3 p4,precision)
     let spotTest5 f1 f2 p1 p2 p3 p4 p5 =
         Assert.AreEqual(f1 p1 p2 p3 p4 p5,f2 p1 p2 p3 p4 p5,precision)
