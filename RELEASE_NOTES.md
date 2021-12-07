@@ -1,3 +1,8 @@
+## 3.0.0 - Dec 7 2021
+* Retarget library onto .NET Standard 2.0
+* Adds explicit support for .NET Core 2.0 and higher including 5.0 and 6.0
+* Removes support for full .NET Framework 4.6 and lower
+
 ## 2.4.1
 * Relaxed FSharp.Core dependency
 
