@@ -3,7 +3,7 @@
 This is a .NET Standard library that provides the full set of financial functions from Excel. The main goal for the library is compatibility with Excel, by providing the same functions, with the same behaviour. Note though that this is not a wrapper over the Excel library; the functions have been re-implemented in managed code so that you do not need to have Excel installed to use this library.
 
 [![NuGet Badge](https://img.shields.io/nuget/v/ExcelFinancialFunctions.svg?style=flat)](https://www.nuget.org/packages/ExcelFinancialFunctions/)
-[![Build and Test](https://github.com/fsprojects/ExcelFinancialFunctions/actions/workflows/dotnet.yml/badge.svg)](https://github.com/fsprojects/ExcelFinancialFunctions/actions/workflows/dotnet.yml)
+[![Build+Test+Docs](https://github.com/fsprojects/ExcelFinancialFunctions/actions/workflows/push-master.yml/badge.svg)](https://github.com/fsprojects/ExcelFinancialFunctions/actions/workflows/push-master.yml)
 
 ## Goal: Match Excel 
 
@@ -16,8 +16,8 @@ Microsoft\'s official documentation on [Excel Functions](https://support.microso
 
 As of last count, the library is validated against 199,252 test cases.
 
-* [ExcelFinancialFunctions.Tests](./tests/ExcelFinancialFunctions.Tests): Unit tests checking against previously-determined truth values from Excel 2010. Inputs and expected outputs are read from data files.
-* [ExcelFinancialFunctions.ConsoleTests](./tests/ExcelFinancialFunctions.ConsoleTests): Test cases comparing the library results directly to running Excel code via interop. These should be run on a Windows machine with Excel 2013 (or later) installed.  
+* **ExcelFinancialFunctions.Tests**: Unit tests checking against previously-determined truth values from Excel 2010. Inputs and expected outputs are read from data files.
+* **ExcelFinancialFunctions.ConsoleTests**: Test cases comparing the library results directly to running Excel code via interop. These should be run on a Windows machine with Excel 2013 (or later) installed.  
 
 ### You can help!
 
