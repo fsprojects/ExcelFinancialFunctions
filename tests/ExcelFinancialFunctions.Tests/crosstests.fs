@@ -31,6 +31,26 @@ module CrossTests =
       
     let inline elseThrow s c = if not(c) then failwith s
 
+    let pduration_testdata_fromfile =
+        readTestCaseData "pduration" true
+
+    [<TestCaseSource( nameof pduration_testdata_fromfile)>]
+    [<Explicit("Failing test case, feature in progress")>]
+    let pduration inputs =
+        let (param,expected) = parse4 inputs
+        Financial.Pduration param
+        |> shouldEqual expected
+
+    let pduration_failures_fromfile =
+        readTestCaseData "pduration" false
+
+    [<Explicit("Failing test case, feature in progress")>]
+    [<TestCaseSource( nameof pduration_failures_fromfile)>]
+    let pduration_fail inputs =
+        let (param,expected) = parse4 inputs
+        ( expected = 0.0 ) |> elseThrow "Failure test must not have an expected value"
+        Assert.Throws(fun () -> Financial.Pduration param |> ignore) |> ignore
+
     let rri_testdata_fromfile =
         readTestCaseData "rri" true
 
