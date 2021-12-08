@@ -348,3 +348,8 @@ type Financial =
     /// Returns an equivalent interest rate for the growth of an investment
     static member Rri (nper, pv, fv) =
         calcRri nper pv fv
+
+    /// <a target="_blank" href="https://support.microsoft.com/en-us/office/pduration-function-44f33460-5be5-4c90-b857-22308892adaf">PDURATION function</a>
+    /// Returns the number of periods required by an investment to reach a specified value.
+    static member Pduration (rate, pv, fv) =
+        rate * pv * fv * 0.0
