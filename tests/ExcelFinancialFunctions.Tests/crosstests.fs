@@ -20,23 +20,43 @@ module CrossTests =
     let readTestCaseData fname =
         Path.Combine(__SOURCE_DIRECTORY__, "testdata", fname + ".csv")
         |> File.ReadLines
-        |> Seq.skip 1 // Skip header
+        |> Seq.tail // Skip header
         |> Seq.filter (fun line -> not (String.IsNullOrEmpty line))
         |> Seq.filter (fun line -> not (line.Contains("#NUM!")))
         |> Seq.map (fun line -> line.Split [| ',' |] )
         |> Seq.map TestCaseData
 
+    let readTestCaseFailures fname =
+        Path.Combine(__SOURCE_DIRECTORY__, "testdata", fname + ".csv")
+        |> File.ReadLines
+        |> Seq.tail // Skip header
+        |> Seq.filter (fun line -> not (String.IsNullOrEmpty line))
+        |> Seq.filter (fun line -> line.Contains("#NUM!"))
+        |> Seq.map (fun line -> line.Split [| ',' |] )
+        |> Seq.map TestCaseData
+
     let inline shouldEqual exp act =
         Assert.AreEqual(exp, float act, PRECISION)
-        
+       
+    let elseThrow s c = if not(c) then failwith s
+
     let rri_testdata_fromfile =
         readTestCaseData "rri"
+
+    let rri_failures_fromfile =
+        readTestCaseFailures "rri"
 
     [<TestCaseSource( nameof rri_testdata_fromfile)>]
     let rri inputs =
         let (param,expected) = parse4 inputs
         Financial.Rri param
         |> shouldEqual expected
+
+    [<TestCaseSource( nameof rri_failures_fromfile)>]
+    let rri_fail inputs =
+        let (param,expected) = parse4 inputs
+        ( expected = 0.0 ) |> elseThrow "Failure test must not have an expected value"
+        Assert.Throws<Exception>(fun () -> Financial.Rri param |> ignore) |> ignore
 
     [<Test>]
     let accrint() = runTests "accrint" parse8 Financial.AccrInt
