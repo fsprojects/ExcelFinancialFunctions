@@ -344,5 +344,7 @@ type Financial =
     static member YearFrac (startDate, endDate, basis) =
         calcYearFrac startDate endDate basis    
     
+    /// <a target="_blank" href="https://support.microsoft.com/en-us/office/rri-function-6f5822d8-7ef1-4233-944c-79e8172930f4">RRI function</a>
+    /// Returns an equivalent interest rate for the growth of an investment
     static member Rri (nper, pv, fv) =
         calcRri nper pv fv
