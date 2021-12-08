@@ -71,3 +71,8 @@ module internal Tvm =
         let mutable result = pv
         for i in interests do result <- result * (1. + i)
         result
+    let calcPduration rate pv fv =
+        ( rate > 0. )               |> elseThrow "rate must be positive"
+        ( pv > 0. )                 |> elseThrow "pv must be positive"
+        ( fv > 0. )                 |> elseThrow "fv must be positive"
+        ( (log fv) - (log pv) ) / log ( 1. + rate)

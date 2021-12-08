@@ -352,4 +352,4 @@ type Financial =
     /// <a target="_blank" href="https://support.microsoft.com/en-us/office/pduration-function-44f33460-5be5-4c90-b857-22308892adaf">PDURATION function</a>
     /// Returns the number of periods required by an investment to reach a specified value.
     static member Pduration (rate, pv, fv) =
-        rate * pv * fv * 0.0
+        calcPduration rate pv fv
