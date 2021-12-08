@@ -44,6 +44,9 @@ module internal Tvm =
             - (fv + pv) / pmt
         else
             nper r pmt pv fv pd
+    let calcRri nper pv fv =
+        if fv = pv then 0.
+        else ( pow (fv/pv) (1.0/nper) ) - 1.
     let calcRate nper pmt pv fv pd guess =
         let haveRightSigns x y z =
             not( sign x = sign y && sign y = sign z) &&
