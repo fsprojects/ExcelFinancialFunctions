@@ -3,10 +3,40 @@
 namespace Excel.FinancialFunctions.Tests
 
 open NUnit.Framework
+open System.IO
+open System
 
 [<SetCulture("en-US")>]
 module CrossTests = 
     open Excel.FinancialFunctions
+
+    // I am prototyping a new way of doing cross tests. The idea is to let the NUnit framework
+    // do more of the work. So we read in the test data into a TestCaseData object, and then 
+    // let NUnit work with that as normal.
+    //
+    // Also these files will be slightly different. They'll have a header, because I exported
+    // them from Excel, and they'll have .csv file extension.
+
+    let readTestCaseData fname =
+        Path.Combine(__SOURCE_DIRECTORY__, "testdata", fname + ".csv")
+        |> File.ReadLines
+        |> Seq.skip 1 // Skip header
+        |> Seq.filter (fun line -> not (String.IsNullOrEmpty line))
+        |> Seq.filter (fun line -> not (line.Contains("#NUM!")))
+        |> Seq.map (fun line -> line.Split [| ',' |] )
+        |> Seq.map TestCaseData
+
+    let inline shouldEqual exp act =
+        Assert.AreEqual(exp, float act, PRECISION)
+        
+    let rri_testdata_fromfile =
+        readTestCaseData "rri"
+
+    [<TestCaseSource( nameof rri_testdata_fromfile)>]
+    let rri inputs =
+        let (param,expected) = parse4 inputs
+        Financial.Rri param
+        |> shouldEqual expected
 
     [<Test>]
     let accrint() = runTests "accrint" parse8 Financial.AccrInt

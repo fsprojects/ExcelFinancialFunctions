@@ -343,4 +343,6 @@ type Financial =
     /// Calculates the fraction of the year represented by the number of whole days between two dates - not a financial function
     static member YearFrac (startDate, endDate, basis) =
         calcYearFrac startDate endDate basis    
-           
+    
+    static member Rri (nper, pv, fv) =
+        calcRri nper pv fv
