@@ -10,14 +10,6 @@ module SpotTests =
     open TestPreconditions
     
     [<Test>]
-    let NegativeBondPriceIssue13() =
-        // Price (settlement, maturity, rate, yld, redemption, frequency, basis) =
-        // 2/15/1980 12:00:00 AM,2/28/2000 12:00:00 AM,0.07,0.03,100,Annual,Actual360,159.5561168405
-        let param = DateTime(1980,02,15), DateTime(2000,02,28), 0.07, -0.002, 100., Frequency.Annual, DayCountBasis.Actual360
-        Financial.PriceAllowNegativeYield param
-        |> shouldEqual (sprintf "YieldIssue8(%A)" param) 247.23572604923615
-
-    [<Test>]
     let YieldIssue8() =
         let param = DateTime(2015,9,21), DateTime(2015,10,15), 0.04625, 105.124, 100. , Frequency.SemiAnnual, DayCountBasis.UsPsa30_360
         Financial.Yield param
