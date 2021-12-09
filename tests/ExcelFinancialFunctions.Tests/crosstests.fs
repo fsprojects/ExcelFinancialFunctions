@@ -67,6 +67,21 @@ module CrossTests =
         ( expected = 0.0 ) |> elseThrow "Failure test must not have an expected value"
         Assert.Throws(fun () -> Financial.Rri param |> ignore) |> ignore
 
+    // Prices for negative yielding bonds match reverse-figured Excel results to 1e-6 until yields get lower than -0.05%
+    // Down to -1.0%, the difference is usually pennies. Once the yield reaches -10%, the difference can be up to $150, but let's hope
+    // we never get there!
+    //
+    // See the file yieldnegativefails.csv for the cases which fail
+
+    let yieldnegative_testdata_fromfile =
+        readTestCaseData "yieldnegative" true
+
+    [<TestCaseSource( nameof yieldnegative_testdata_fromfile)>]
+    let yieldnegative inputs =
+        let (param,expected) = parse8 inputs
+        Financial.PriceAllowNegativeYield param
+        |> shouldEqual expected
+
     [<Test>]
     let accrint() = runTests "accrint" parse8 Financial.AccrInt
         
