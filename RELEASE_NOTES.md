@@ -1,3 +1,10 @@
+## 3.1.0 - Dec 12 2021
+* Adds PDURATION function. Returns the number of periods required by an investment to reach a specified value. (Resolves #62)
+* Adds RRI function. Also used for CAGR. Returns an equivalent interest rate for the growth of an investment. (Resolves #60)
+* Improves XIRR function by reducing the precision required before an answer is returned. (Fixes #27)
+* Improves ACCRINT function by allowing first interest date on the settlement date. (Fixes #22)
+* Adds PriceAllowNegativeYield function. This operates like the PRICE function except that it allows negative yield inputs. It is experimental. We'd love feedback on how this works for folks. (Fixes #13)
+
 ## 3.0.0 - Dec 7 2021
 * Retarget library onto .NET Standard 2.0
 * Adds explicit support for .NET Core 2.0 and higher including 5.0 and 6.0
