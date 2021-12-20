@@ -50,10 +50,10 @@ Even though the libary is written in F#, you can use it from any .NET language, 
 ``` c#
 using Excel.FinancialFunctions;
 
-Console.WriteLine( Financial.IPmt(rate: 0.005, per: 53, nper: 360, pv: 500000, fv: 0, typ: PaymentDue.EndOfPeriod) );
+Console.WriteLine( Financial.IPmt(rate: 0.005, per: 53, nper: 180, pv: 200000, fv: 0, typ: PaymentDue.EndOfPeriod) );
 // Displays -796.3747578439793
 
-Console.WriteLine( Financial.Pmt(rate: 0.005, nper: 360, pv: 500000, fv: 0, typ: PaymentDue.EndOfPeriod) );
+Console.WriteLine( Financial.Pmt(rate: 0.005, nper: 180, pv: 200000, fv: 0, typ: PaymentDue.EndOfPeriod) );
 // Displays -1687.7136560969248
 ```
 
