@@ -4,11 +4,20 @@ open FsCheck
 open NUnit.Framework
 
 [<SetCulture("en-US")>]
+[<DefaultFloatingPointTolerance(1e-6)>]
 module SpotTests =
     open System 
     open Excel.FinancialFunctions
     open TestPreconditions
     
+    [<Test(ExpectedResult = -796.374758)>]
+    let Readme1() =
+        Financial.IPmt (0.005, 53., 180., 200000., 0., PaymentDue.EndOfPeriod) 
+
+    [<Test(ExpectedResult = -1687.713656)>]
+    let Readme2() =
+        Financial.Pmt (0.005, 180., 200000., 0., PaymentDue.EndOfPeriod) 
+
     [<Test>]
     let YieldIssue8() =
         let param = DateTime(2015,9,21), DateTime(2015,10,15), 0.04625, 105.124, 100. , Frequency.SemiAnnual, DayCountBasis.UsPsa30_360

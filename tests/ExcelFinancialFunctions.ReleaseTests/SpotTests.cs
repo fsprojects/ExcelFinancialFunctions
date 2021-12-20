@@ -7,6 +7,14 @@ namespace ExcelFinancialFunctions.ReleaseTests
     [DefaultFloatingPointTolerance(1e-6)]
     public class SpotTests
     {
+        [Test(ExpectedResult = -796.374758)]
+        public double Readme1()
+            => Financial.IPmt(rate: 0.005, per: 53, nper: 180, pv: 200000, fv: 0, typ: PaymentDue.EndOfPeriod);
+
+        [Test(ExpectedResult = -1687.713656)]
+        public double Readme2()
+            => Financial.Pmt(rate: 0.005, nper: 180, pv: 200000, fv: 0, typ: PaymentDue.EndOfPeriod);
+
         [Test(ExpectedResult = -0.67428578540657702)]
         public double YieldIssue8()
             => Financial.Yield(new DateTime(2015, 9, 21), new DateTime(2015, 10, 15), 0.04625, 105.124, 100.0, Frequency.SemiAnnual, DayCountBasis.UsPsa30_360);
