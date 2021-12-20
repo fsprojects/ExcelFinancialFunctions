@@ -7,8 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    env:
-      TARGETS: "src\\ExcelFinancialFunctions;tests\\ExcelFinancialFunctions_Tests"
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET
@@ -16,13 +14,13 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet restore -target:$TARGETS
+      run: dotnet restore
     - name: Build Debug
-      run: dotnet build -target:$TARGETS --no-restore
+      run: dotnet build --no-restore
     - name: Run Debug Tests (Release tests fail to discover)
-      run: dotnet test .\\tests\\ExcelFinancialFunctions.Tests\\ExcelFinancialFunctions.Tests.fsproj --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal
     - name: Build Release
-      run: dotnet build -target:$TARGETS --no-restore --configuration=Release
+      run: dotnet build --no-restore --configuration=Release
     - name: Restore tools
       run: dotnet tool restore
     - name: Run fsdocs
