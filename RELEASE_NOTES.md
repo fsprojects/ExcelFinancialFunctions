@@ -1,4 +1,4 @@
-## 3.1.0 - Dec 12 2021
+## 3.1.0 - Dec 20 2021
 * Adds PDURATION function. Returns the number of periods required by an investment to reach a specified value. (Resolves #62)
 * Adds RRI function. Also used for CAGR. Returns an equivalent interest rate for the growth of an investment. (Resolves #60)
 * Improves XIRR function by reducing the precision required before an answer is returned. (Fixes #27)
