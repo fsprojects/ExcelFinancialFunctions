@@ -18,12 +18,10 @@ module internal TestPreconditions =
         ( pmt <> 0. || fv <> 0. )   
     let tryFv r nper pmt pv pd =
         ( raisable r nper)                      &&
-        ( r <> -1. || (r = -1. && nper > 0.) )  &&
-        ( pmt <> 0. || pv <> 0. )       
+        ( r <> -1. || (r = -1. && nper > 0.) )  
     let tryPmt r nper pv fv pd =
         ( raisable r nper)          &&
         ( r > -1. )                 &&
-        ( fv <> 0. || pv <> 0. )    &&
         ( annuityCertainPvFactor r nper pd <> 0. )
     let tryNper r pmt pv fv pd =
         ( r > -1.)                                  &&

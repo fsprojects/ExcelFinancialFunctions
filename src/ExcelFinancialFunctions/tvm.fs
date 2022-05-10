@@ -28,13 +28,11 @@ module internal Tvm =
     let calcFv r nper pmt pv pd =
         ( raisable r nper)                          |> elseThrow "r is not raisable to nper (r is negative and nper not an integer"
         ( r <> -1. || (r = -1. && nper > 0.) )      |> elseThrow "r cannot be -100% when nper is <= 0"
-        ( pmt <> 0. || pv <> 0. )                   |> elseThrow "pmt or pv need to be different from 0"
         if r = -1. && pd = PaymentDue.BeginningOfPeriod then - (pv * fvFactor r nper)
         elif r = -1. && pd = PaymentDue.EndOfPeriod then - (pv * fvFactor r nper + pmt)
         else fv r nper pmt pv pd
     let calcPmt r nper pv fv pd =
         ( raisable r nper)                                                          |> elseThrow "r is not raisable to nper (r is negative and nper not an integer"
-        ( fv <> 0. || pv <> 0. )                                                    |> elseThrow "fv or pv need to be different from 0"
         ( r <> -1. || (r = -1. && nper > 0. && pd = PaymentDue.EndOfPeriod) )       |> elseThrow "r cannot be -100% when nper is <= 0"
         ( annuityCertainPvFactor r nper pd <> 0. )                                  |> elseThrow "1 * pd + 1 - (1 / (1 + r)^nper) / nper has to be <> 0"
         if r = -1. then -fv
