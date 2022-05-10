@@ -18,6 +18,14 @@ module SpotTests =
     let Readme2() =
         Financial.Pmt (0.005, 180., 200000., 0., PaymentDue.EndOfPeriod) 
 
+    [<Test(ExpectedResult = 0.)>]
+    let FvPull67() =
+        Financial.Fv (0.005, 180., 0., 0., PaymentDue.EndOfPeriod)
+
+    [<Test(ExpectedResult = 0.)>]
+    let PmtPull67() =
+        Financial.Pmt (0.005, 180., 0., 0., PaymentDue.EndOfPeriod)
+
     [<Test>]
     let YieldIssue8() =
         let param = DateTime(2015,9,21), DateTime(2015,10,15), 0.04625, 105.124, 100. , Frequency.SemiAnnual, DayCountBasis.UsPsa30_360
