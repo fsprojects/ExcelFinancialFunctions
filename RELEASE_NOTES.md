@@ -1,3 +1,6 @@
+## 3.2.0 - May 10 2022
+* Removes needless constraint on 0-value inputs to FV & PMT functions. (PR #67)
+
 ## 3.1.0 - Dec 20 2021
 * Adds PDURATION function. Returns the number of periods required by an investment to reach a specified value. (Resolves #62)
 * Adds RRI function. Also used for CAGR. Returns an equivalent interest rate for the growth of an investment. (Resolves #60)
