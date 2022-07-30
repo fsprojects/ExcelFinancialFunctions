@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <WarnOn>3390;$(WarnOn)</WarnOn>
     <Title>ExcelFinancialFunctions</Title>
     <AssemblyTitle>ExcelFinancialFunctions</AssemblyTitle>
@@ -39,8 +39,8 @@
     <Compile Include="tbill.fs" />
     <Compile Include="testpreconditions.fs" />
     <Compile Include="wrapperdotnettype.fs" />
-    <None Include="..\..\docs\img\logo.png" Pack="true" PackagePath="\" />
-    <None Include="..\..\PackageReadmeFile.md" Pack="true" PackagePath="\" />    
+    <None Include="..\..\docs\img\logo.png" Pack="true" PackagePath="\"/>
+    <None Include="..\..\PackageReadmeFile.md" Pack="true" PackagePath="\"/>    
   </ItemGroup>
 
 </Project>
