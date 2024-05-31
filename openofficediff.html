@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en" data-root="https://fsprojects.github.io/ExcelFinancialFunctions/">
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Luca Bolognese" name="author">
+    <!-- Opengraph properties (https://ogp.me/) -->
+    <meta property="og:site_name" content="ExcelFinancialFunctions">
+    <meta property="og:title" content="Difference between OpenOffice and the library
+" />
+    <meta property="og:url" content="https://fsprojects.github.io/ExcelFinancialFunctions/openofficediff.html">
+    <meta property="og:type" content="website" />
+    <!-- Twitter cards (https://developer.twitter.com/en/docs/twitter-for-websites/cards/overview/summary-card-with-large-image) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="https://fsprojects.github.io/ExcelFinancialFunctions/">
+    <meta name="twitter:title" content="Difference between OpenOffice and the library
+">
+    
+    <title>Difference between OpenOffice and the library
+ | ExcelFinancialFunctions</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fsprojects.github.io/ExcelFinancialFunctions/img/favicon.ico" rel="icon" sizes="32x32" type="image/png"/>
+    <script type="application/javascript" src="https://fsprojects.github.io/ExcelFinancialFunctions/content/fsdocs-theme-set-dark.js"></script>
+    <link href="https://fsprojects.github.io/ExcelFinancialFunctions/content/fsdocs-default.css" rel="stylesheet" type="text/css"/>
+    <link href="https://fsprojects.github.io/ExcelFinancialFunctions/content/fsdocs-theme.css" rel="stylesheet" type="text/css"/>
+    
+    
+</head>
+<body class="content">
+<header>
+    <div class="start">
+        <div id="menu-toggle">
+            <iconify-icon class="icon closed" height="22" icon="eva:menu-fill" width="22"></iconify-icon>
+            <iconify-icon class="icon open" height="22" icon="mi:close" width="22"></iconify-icon>
+            <input type="checkbox" name="mobile-menu" />
+            <ul class="menu">
+                <li class="nav-header">Links</li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/fsprojects/ExcelFinancialFunctions/blob/master/LICENSE.txt">License</a>
+                </li>
+                <li class="nav-item"><a class="nav-link"
+                                        href="https://github.com/fsprojects/ExcelFinancialFunctions/blob/master/RELEASE_NOTES.md">Release
+                    Notes</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/fsprojects/ExcelFinancialFunctions/">Source
+                    Repository</a></li>
+                <li class="nav-header">
+  Documentation
+</li>             
+<li class="nav-item active">
+  <a class="nav-link" href="https://fsprojects.github.io/ExcelFinancialFunctions/openofficediff.html">
+    Difference between OpenOffice and the library
+
+  </a>
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fsprojects.github.io/ExcelFinancialFunctions/compatibility.html">
+    Compatibility
+
+  </a>
+</li>
+                <li class="nav-header">
+  API Reference
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="https://fsprojects.github.io/ExcelFinancialFunctions/reference/index.html">
+    All Namespaces
+  </a>
+</li>
+            </ul>
+        </div>
+        <a href="https://fsprojects.github.io/ExcelFinancialFunctions/">
+            <img alt="Header menu logo" src="https://fsprojects.github.io/ExcelFinancialFunctions/img/logo.png">
+            <strong>ExcelFinancialFunctions</strong>
+        </a>
+    </div>
+    <div class="end">
+        <a href="https://github.com/fsprojects/ExcelFinancialFunctions/" target="_blank">
+            <iconify-icon icon="uil:github" width="26" height="26"></iconify-icon>
+        </a>
+        <iconify-icon id="search-btn" icon="carbon:search" class="search" width="24" height="24"></iconify-icon>
+        <fsdocs-theme-toggle></fsdocs-theme-toggle>
+    </div>
+</header>
+<aside id="fsdocs-main-menu">
+    <ul class="menu">
+        <li class="nav-header">Links</li>
+        <li class="nav-item"><a class="nav-link" href="https://github.com/fsprojects/ExcelFinancialFunctions/blob/master/LICENSE.txt">License</a>
+        </li>
+        <li class="nav-item"><a class="nav-link"
+                                href="https://github.com/fsprojects/ExcelFinancialFunctions/blob/master/RELEASE_NOTES.md">Release
+            Notes</a></li>
+        <li class="nav-item"><a class="nav-link" href="https://github.com/fsprojects/ExcelFinancialFunctions/">Source
+            Repository</a></li>
+        <li class="nav-header">
+  Documentation
+</li>             
+<li class="nav-item active">
+  <a class="nav-link" href="https://fsprojects.github.io/ExcelFinancialFunctions/openofficediff.html">
+    Difference between OpenOffice and the library
+
+  </a>
+</li>             
+<li class="nav-item ">
+  <a class="nav-link" href="https://fsprojects.github.io/ExcelFinancialFunctions/compatibility.html">
+    Compatibility
+
+  </a>
+</li>
+        <li class="nav-header">
+  API Reference
+</li>             
+<li class="nav-item">
+  <a class="nav-link" href="https://fsprojects.github.io/ExcelFinancialFunctions/reference/index.html">
+    All Namespaces
+  </a>
+</li>
+    </ul>
+</aside>
+<main>
+    <div id="content">
+        <h1><a name="Difference-between-OpenOffice-and-the-library" class="anchor" href="#Difference-between-OpenOffice-and-the-library">Difference between OpenOffice and the library</a></h1>
+<p>The library was designed to be Excel-compliant (see <a href="compatibility.html">Compatibility</a> section), therefore its behavior is different from OpenOffice/LibreOffice.
+Most of the differences are because of the day count conventions and root finding algorithm implementation details.
+Some examples are provided below.</p>
+<h2><a name="ODDFYIELD-ODDFPRICE" class="anchor" href="#ODDFYIELD-ODDFPRICE">ODDFYIELD, ODDFPRICE</a></h2>
+<p>According to the <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_ODDFYIELD_function">OO wiki</a>,
+these functions currently return invalid results (it's #VALUE! even for valid inputs).</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span onmouseout="hideTip(event, 'fs4', 4)" onmouseover="showTip(event, 'fs4', 4)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs5', 5)" onmouseover="showTip(event, 'fs5', 5)" class="id">OddFYield</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 6)" onmouseover="showTip(event, 'fs6', 6)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2008</span><span class="pn">,</span> <span class="n">12</span><span class="pn">,</span> <span class="n">11</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 7)" onmouseover="showTip(event, 'fs6', 7)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2021</span><span class="pn">,</span> <span class="n">4</span><span class="pn">,</span> <span class="n">1</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 8)" onmouseover="showTip(event, 'fs6', 8)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2008</span><span class="pn">,</span> <span class="n">10</span><span class="pn">,</span> <span class="n">15</span><span class="pn">)</span><span class="pn">,</span> 
+    <span onmouseout="hideTip(event, 'fs6', 9)" onmouseover="showTip(event, 'fs6', 9)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2009</span><span class="pn">,</span> <span class="n">4</span><span class="pn">,</span> <span class="n">1</span><span class="pn">)</span><span class="pn">,</span> <span class="n">0.06</span><span class="pn">,</span> <span class="n">100.</span><span class="pn">,</span> <span class="n">100.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs7', 10)" onmouseover="showTip(event, 'fs7', 10)" class="en">Frequency</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs8', 11)" onmouseover="showTip(event, 'fs8', 11)" class="id">Quarterly</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 12)" onmouseover="showTip(event, 'fs9', 12)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs10', 13)" onmouseover="showTip(event, 'fs10', 13)" class="id">ActualActual</span><span class="pn">)</span>
+<span class="fsi">Excel: 0.059976999</span>
+<span onmouseout="hideTip(event, 'fs4', 14)" onmouseover="showTip(event, 'fs4', 14)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs11', 15)" onmouseover="showTip(event, 'fs11', 15)" class="id">OddFPrice</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 16)" onmouseover="showTip(event, 'fs6', 16)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1999</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 17)" onmouseover="showTip(event, 'fs6', 17)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2010</span><span class="pn">,</span> <span class="n">6</span><span class="pn">,</span> <span class="n">30</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 18)" onmouseover="showTip(event, 'fs6', 18)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1998</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span>
+    <span onmouseout="hideTip(event, 'fs6', 19)" onmouseover="showTip(event, 'fs6', 19)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2009</span><span class="pn">,</span> <span class="n">6</span><span class="pn">,</span> <span class="n">30</span><span class="pn">)</span><span class="pn">,</span> <span class="n">0.07</span><span class="pn">,</span> <span class="n">0.03</span><span class="pn">,</span> <span class="n">100.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs7', 20)" onmouseover="showTip(event, 'fs7', 20)" class="en">Frequency</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs12', 21)" onmouseover="showTip(event, 'fs12', 21)" class="id">Annual</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 22)" onmouseover="showTip(event, 'fs9', 22)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs13', 23)" onmouseover="showTip(event, 'fs13', 23)" class="id">Actual360</span><span class="pn">)</span>
+<span class="fsi">Excel: 127.9031274</span>
+</code></pre>
+<h2><a name="ODDLYIELD-OODLPRICE" class="anchor" href="#ODDLYIELD-OODLPRICE">ODDLYIELD, OODLPRICE</a></h2>
+<p>The functions return different results. ODDLYIELD example can be found <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_ODDLYIELD_function">here</a>.</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span onmouseout="hideTip(event, 'fs4', 24)" onmouseover="showTip(event, 'fs4', 24)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs14', 25)" onmouseover="showTip(event, 'fs14', 25)" class="id">OddLPrice</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 26)" onmouseover="showTip(event, 'fs6', 26)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1999</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 27)" onmouseover="showTip(event, 'fs6', 27)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2000</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 28)" onmouseover="showTip(event, 'fs6', 28)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1998</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span>
+    <span class="n">0.07</span><span class="pn">,</span> <span class="n">0.03</span><span class="pn">,</span> <span class="n">130.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs7', 29)" onmouseover="showTip(event, 'fs7', 29)" class="en">Frequency</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs15', 30)" onmouseover="showTip(event, 'fs15', 30)" class="id">SemiAnnual</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 31)" onmouseover="showTip(event, 'fs9', 31)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs13', 32)" onmouseover="showTip(event, 'fs13', 32)" class="id">Actual360</span><span class="pn">)</span>
+<span class="fsi">Excel: 132.8058252  LibreOffice: 132.8407748124</span>
+
+<span onmouseout="hideTip(event, 'fs4', 33)" onmouseover="showTip(event, 'fs4', 33)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs16', 34)" onmouseover="showTip(event, 'fs16', 34)" class="id">OddLYield</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 35)" onmouseover="showTip(event, 'fs6', 35)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1990</span><span class="pn">,</span> <span class="n">6</span><span class="pn">,</span> <span class="n">1</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 36)" onmouseover="showTip(event, 'fs6', 36)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1995</span><span class="pn">,</span> <span class="n">12</span><span class="pn">,</span> <span class="n">31</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 37)" onmouseover="showTip(event, 'fs6', 37)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1990</span><span class="pn">,</span> <span class="n">1</span><span class="pn">,</span> <span class="n">1</span><span class="pn">)</span><span class="pn">,</span>
+    <span class="n">0.002</span><span class="pn">,</span> <span class="n">103.</span><span class="pn">,</span> <span class="n">100.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs7', 38)" onmouseover="showTip(event, 'fs7', 38)" class="en">Frequency</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs8', 39)" onmouseover="showTip(event, 'fs8', 39)" class="id">Quarterly</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 40)" onmouseover="showTip(event, 'fs9', 40)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs10', 41)" onmouseover="showTip(event, 'fs10', 41)" class="id">ActualActual</span><span class="pn">)</span>
+<span class="fsi">Excel: -0.00327563  LibreOffice: -0.002925876</span>
+<span class="c">// Returns the same value even though the frequency is different</span>
+<span onmouseout="hideTip(event, 'fs4', 42)" onmouseover="showTip(event, 'fs4', 42)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs16', 43)" onmouseover="showTip(event, 'fs16', 43)" class="id">OddLYield</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 44)" onmouseover="showTip(event, 'fs6', 44)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1990</span><span class="pn">,</span> <span class="n">6</span><span class="pn">,</span> <span class="n">1</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 45)" onmouseover="showTip(event, 'fs6', 45)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1995</span><span class="pn">,</span> <span class="n">12</span><span class="pn">,</span> <span class="n">31</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 46)" onmouseover="showTip(event, 'fs6', 46)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1990</span><span class="pn">,</span> <span class="n">1</span><span class="pn">,</span> <span class="n">1</span><span class="pn">)</span><span class="pn">,</span>
+    <span class="n">0.002</span><span class="pn">,</span> <span class="n">103.</span><span class="pn">,</span> <span class="n">100.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs7', 47)" onmouseover="showTip(event, 'fs7', 47)" class="en">Frequency</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs12', 48)" onmouseover="showTip(event, 'fs12', 48)" class="id">Annual</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 49)" onmouseover="showTip(event, 'fs9', 49)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs10', 50)" onmouseover="showTip(event, 'fs10', 50)" class="id">ActualActual</span><span class="pn">)</span>
+<span class="fsi">Excel: -0.00327205  LibreOffice: -0.002925876</span>
+</code></pre>
+<h2><a name="ACCRINT-DISC-DURATION-PRICE-YIELD-INTRATE-TBILL-and-others" class="anchor" href="#ACCRINT-DISC-DURATION-PRICE-YIELD-INTRATE-TBILL-and-others">ACCRINT, DISC, DURATION, PRICE, YIELD, INTRATE, TBILL* and others</a></h2>
+<p>Most likely the differences can be explained with YEARFRAC/day count implementations.
+DURATION in OO is a completely different function, the analog of Excel one is called DURATION_ADD.</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="c">// in our tests, the numbers for European 30/360 basis were the same.</span>
+<span class="k">let</span> <span onmouseout="hideTip(event, 'fs17', 51)" onmouseover="showTip(event, 'fs17', 51)" class="fn">accrint</span> <span onmouseout="hideTip(event, 'fs18', 52)" onmouseover="showTip(event, 'fs18', 52)" class="fn">basis</span> <span class="o">=</span> 
+    <span onmouseout="hideTip(event, 'fs4', 53)" onmouseover="showTip(event, 'fs4', 53)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs19', 54)" onmouseover="showTip(event, 'fs19', 54)" class="id">AccrInt</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 55)" onmouseover="showTip(event, 'fs6', 55)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1990</span><span class="pn">,</span> <span class="n">3</span><span class="pn">,</span> <span class="n">4</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 56)" onmouseover="showTip(event, 'fs6', 56)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1993</span><span class="pn">,</span> <span class="n">3</span><span class="pn">,</span> <span class="n">31</span><span class="pn">)</span><span class="pn">,</span> 
+        <span onmouseout="hideTip(event, 'fs6', 57)" onmouseover="showTip(event, 'fs6', 57)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1992</span><span class="pn">,</span> <span class="n">3</span><span class="pn">,</span> <span class="n">4</span><span class="pn">)</span><span class="pn">,</span> <span class="n">0.07</span><span class="pn">,</span> <span class="n">10000.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs7', 58)" onmouseover="showTip(event, 'fs7', 58)" class="en">Frequency</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs15', 59)" onmouseover="showTip(event, 'fs15', 59)" class="id">SemiAnnual</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs18', 60)" onmouseover="showTip(event, 'fs18', 60)" class="fn">basis</span><span class="pn">)</span>
+
+<span onmouseout="hideTip(event, 'fs17', 61)" onmouseover="showTip(event, 'fs17', 61)" class="fn">accrint</span> <span onmouseout="hideTip(event, 'fs9', 62)" onmouseover="showTip(event, 'fs9', 62)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs20', 63)" onmouseover="showTip(event, 'fs20', 63)" class="id">UsPsa30_360</span>
+<span class="fsi">Excel: 1401.944444  LibreOffice: 1400.000000</span>
+<span onmouseout="hideTip(event, 'fs17', 64)" onmouseover="showTip(event, 'fs17', 64)" class="fn">accrint</span> <span onmouseout="hideTip(event, 'fs9', 65)" onmouseover="showTip(event, 'fs9', 65)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs10', 66)" onmouseover="showTip(event, 'fs10', 66)" class="id">ActualActual</span>
+<span class="fsi">Excel: 1398.076923  LibreOffice: 1401.917808</span>
+<span onmouseout="hideTip(event, 'fs17', 67)" onmouseover="showTip(event, 'fs17', 67)" class="fn">accrint</span> <span onmouseout="hideTip(event, 'fs9', 68)" onmouseover="showTip(event, 'fs9', 68)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs13', 69)" onmouseover="showTip(event, 'fs13', 69)" class="id">Actual360</span>
+<span class="fsi">Excel: 1394.166667  LibreOffice: 1421.388889</span>
+<span onmouseout="hideTip(event, 'fs17', 70)" onmouseover="showTip(event, 'fs17', 70)" class="fn">accrint</span> <span onmouseout="hideTip(event, 'fs9', 71)" onmouseover="showTip(event, 'fs9', 71)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs21', 72)" onmouseover="showTip(event, 'fs21', 72)" class="id">Actual365</span>
+<span class="fsi">Excel: 1399.041096  LibreOffice: 1401.917808</span>
+
+<span onmouseout="hideTip(event, 'fs4', 73)" onmouseover="showTip(event, 'fs4', 73)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs22', 74)" onmouseover="showTip(event, 'fs22', 74)" class="id">AccrIntM</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 75)" onmouseover="showTip(event, 'fs6', 75)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1990</span><span class="pn">,</span> <span class="n">3</span><span class="pn">,</span> <span class="n">4</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 76)" onmouseover="showTip(event, 'fs6', 76)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2010</span><span class="pn">,</span> <span class="n">6</span><span class="pn">,</span> <span class="n">5</span><span class="pn">)</span><span class="pn">,</span> <span class="n">0.1</span><span class="pn">,</span> <span class="n">12030.34</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 77)" onmouseover="showTip(event, 'fs9', 77)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs10', 78)" onmouseover="showTip(event, 'fs10', 78)" class="id">ActualActual</span><span class="pn">)</span>
+<span class="fsi">Excel: 24367.7909   LibreOffice: 24383.68639</span>
+
+<span onmouseout="hideTip(event, 'fs4', 79)" onmouseover="showTip(event, 'fs4', 79)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs23', 80)" onmouseover="showTip(event, 'fs23', 80)" class="id">Disc</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 81)" onmouseover="showTip(event, 'fs6', 81)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2003</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">14</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 82)" onmouseover="showTip(event, 'fs6', 82)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2004</span><span class="pn">,</span> <span class="n">3</span><span class="pn">,</span> <span class="n">31</span><span class="pn">)</span><span class="pn">,</span> <span class="n">23.</span><span class="pn">,</span> <span class="n">100.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 83)" onmouseover="showTip(event, 'fs9', 83)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs10', 84)" onmouseover="showTip(event, 'fs10', 84)" class="id">ActualActual</span><span class="pn">)</span>
+<span class="fsi">Excel: 0.684757     LibreOffice: 0.683820</span>
+
+<span onmouseout="hideTip(event, 'fs4', 85)" onmouseover="showTip(event, 'fs4', 85)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs24', 86)" onmouseover="showTip(event, 'fs24', 86)" class="id">Duration</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 87)" onmouseover="showTip(event, 'fs6', 87)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1980</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">15</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 88)" onmouseover="showTip(event, 'fs6', 88)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2000</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span> <span class="n">100.</span><span class="pn">,</span> <span class="n">0.03</span><span class="pn">,</span> 
+    <span onmouseout="hideTip(event, 'fs7', 89)" onmouseover="showTip(event, 'fs7', 89)" class="en">Frequency</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs12', 90)" onmouseover="showTip(event, 'fs12', 90)" class="id">Annual</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 91)" onmouseover="showTip(event, 'fs9', 91)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs13', 92)" onmouseover="showTip(event, 'fs13', 92)" class="id">Actual360</span><span class="pn">)</span>
+<span class="fsi">Excel: 8.949173     LibreOffice: 9.254729</span>
+
+<span onmouseout="hideTip(event, 'fs4', 93)" onmouseover="showTip(event, 'fs4', 93)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs25', 94)" onmouseover="showTip(event, 'fs25', 94)" class="id">MDuration</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 95)" onmouseover="showTip(event, 'fs6', 95)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1980</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">15</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 96)" onmouseover="showTip(event, 'fs6', 96)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2000</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span> <span class="n">100.</span><span class="pn">,</span> <span class="n">0.03</span><span class="pn">,</span>
+    <span onmouseout="hideTip(event, 'fs7', 97)" onmouseover="showTip(event, 'fs7', 97)" class="en">Frequency</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs15', 98)" onmouseover="showTip(event, 'fs15', 98)" class="id">SemiAnnual</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 99)" onmouseover="showTip(event, 'fs9', 99)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs13', 100)" onmouseover="showTip(event, 'fs13', 100)" class="id">Actual360</span><span class="pn">)</span>
+<span class="fsi">Excel: 8.860247     LibreOffice: 9.158550</span>
+
+<span onmouseout="hideTip(event, 'fs4', 101)" onmouseover="showTip(event, 'fs4', 101)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs26', 102)" onmouseover="showTip(event, 'fs26', 102)" class="id">Price</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 103)" onmouseover="showTip(event, 'fs6', 103)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1980</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">15</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 104)" onmouseover="showTip(event, 'fs6', 104)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2000</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span> <span class="n">0.07</span><span class="pn">,</span> <span class="n">0.1</span><span class="pn">,</span> <span class="n">100.</span><span class="pn">,</span> 
+    <span onmouseout="hideTip(event, 'fs7', 105)" onmouseover="showTip(event, 'fs7', 105)" class="en">Frequency</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs12', 106)" onmouseover="showTip(event, 'fs12', 106)" class="id">Annual</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 107)" onmouseover="showTip(event, 'fs9', 107)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs13', 108)" onmouseover="showTip(event, 'fs13', 108)" class="id">Actual360</span><span class="pn">)</span>
+<span class="fsi">Excel: 74.442516    LibreOffice: 74.334983</span>
+
+<span onmouseout="hideTip(event, 'fs4', 109)" onmouseover="showTip(event, 'fs4', 109)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs27', 110)" onmouseover="showTip(event, 'fs27', 110)" class="id">PriceDisc</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 111)" onmouseover="showTip(event, 'fs6', 111)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1980</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">15</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 112)" onmouseover="showTip(event, 'fs6', 112)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2000</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span> <span class="n">0.01</span><span class="pn">,</span> <span class="n">100.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 113)" onmouseover="showTip(event, 'fs9', 113)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs10', 114)" onmouseover="showTip(event, 'fs10', 114)" class="id">ActualActual</span><span class="pn">)</span>
+<span class="fsi">Excel: 79.966367    LibreOffice: 80.005464</span>
+
+<span onmouseout="hideTip(event, 'fs4', 115)" onmouseover="showTip(event, 'fs4', 115)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs28', 116)" onmouseover="showTip(event, 'fs28', 116)" class="id">IntRate</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 117)" onmouseover="showTip(event, 'fs6', 117)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1980</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">15</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 118)" onmouseover="showTip(event, 'fs6', 118)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1980</span><span class="pn">,</span> <span class="n">5</span><span class="pn">,</span> <span class="n">4</span><span class="pn">)</span><span class="pn">,</span> <span class="n">23.</span><span class="pn">,</span> <span class="n">130.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 119)" onmouseover="showTip(event, 'fs9', 119)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs20', 120)" onmouseover="showTip(event, 'fs20', 120)" class="id">UsPsa30_360</span><span class="pn">)</span>
+<span class="fsi">Excel: 21.199780    LibreOffice: 21.471572</span>
+
+<span onmouseout="hideTip(event, 'fs4', 121)" onmouseover="showTip(event, 'fs4', 121)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs29', 122)" onmouseover="showTip(event, 'fs29', 122)" class="id">TBillPrice</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 123)" onmouseover="showTip(event, 'fs6', 123)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1980</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">15</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 124)" onmouseover="showTip(event, 'fs6', 124)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1980</span><span class="pn">,</span> <span class="n">3</span><span class="pn">,</span> <span class="n">15</span><span class="pn">)</span><span class="pn">,</span> <span class="n">2.</span><span class="pn">)</span>
+<span class="fsi">Excel: 83.888889    LibreOffice: 82.777778</span>
+
+<span onmouseout="hideTip(event, 'fs4', 125)" onmouseover="showTip(event, 'fs4', 125)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs30', 126)" onmouseover="showTip(event, 'fs30', 126)" class="id">Received</span><span class="pn">(</span><span onmouseout="hideTip(event, 'fs6', 127)" onmouseover="showTip(event, 'fs6', 127)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1980</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">15</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 128)" onmouseover="showTip(event, 'fs6', 128)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2000</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span> <span class="n">200.</span><span class="pn">,</span> <span class="n">0.01</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 129)" onmouseover="showTip(event, 'fs9', 129)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs10', 130)" onmouseover="showTip(event, 'fs10', 130)" class="id">ActualActual</span><span class="pn">)</span>
+<span class="fsi">Excel: 250.105148   LibreOffice: 249.982925</span>
+
+<span class="c">// the only function which seems to behave differently in Excel Office for Mac</span>
+<span onmouseout="hideTip(event, 'fs4', 131)" onmouseover="showTip(event, 'fs4', 131)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs31', 132)" onmouseover="showTip(event, 'fs31', 132)" class="id">AmorDegrc</span><span class="pn">(</span><span class="n">100.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 133)" onmouseover="showTip(event, 'fs6', 133)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1998</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 134)" onmouseover="showTip(event, 'fs6', 134)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2000</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">29</span><span class="pn">)</span><span class="pn">,</span> 
+    <span class="n">10.</span><span class="pn">,</span> <span class="n">0.3</span><span class="pn">,</span> <span class="n">0.15</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 135)" onmouseover="showTip(event, 'fs9', 135)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs21', 136)" onmouseover="showTip(event, 'fs21', 136)" class="id">Actual365</span><span class="pn">,</span> <span class="k">true</span><span class="pn">)</span>
+<span class="fsi">Excel: 0    Excel for Mac: -2   LibreOffice: 75</span>
+</code></pre>
+<h2><a name="AMORLINC" class="anchor" href="#AMORLINC">AMORLINC</a></h2>
+<p>As stated <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_AMORLINC_function">here</a>,
+when the date of purchase is the end of a period, Excel regards the initial period 0 as the first full period,
+whereas OO regards the initial period as of zero length and returns 0.<br />
+However, there're other differences too.</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span onmouseout="hideTip(event, 'fs4', 137)" onmouseover="showTip(event, 'fs4', 137)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs32', 138)" onmouseover="showTip(event, 'fs32', 138)" class="id">AmorLinc</span><span class="pn">(</span><span class="n">100.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 139)" onmouseover="showTip(event, 'fs6', 139)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1998</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 140)" onmouseover="showTip(event, 'fs6', 140)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2000</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">29</span><span class="pn">)</span><span class="pn">,</span> <span class="n">10.</span><span class="pn">,</span> <span class="n">0.</span><span class="pn">,</span> <span class="n">0.07</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 141)" onmouseover="showTip(event, 'fs9', 141)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs21', 142)" onmouseover="showTip(event, 'fs21', 142)" class="id">Actual365</span><span class="pn">)</span>
+<span class="fsi">Excel: 14.000000   LibreOffice: 14.019178</span>
+<span onmouseout="hideTip(event, 'fs4', 143)" onmouseover="showTip(event, 'fs4', 143)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs32', 144)" onmouseover="showTip(event, 'fs32', 144)" class="id">AmorLinc</span><span class="pn">(</span><span class="n">100.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 145)" onmouseover="showTip(event, 'fs6', 145)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1998</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 146)" onmouseover="showTip(event, 'fs6', 146)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2009</span><span class="pn">,</span> <span class="n">6</span><span class="pn">,</span> <span class="n">30</span><span class="pn">)</span><span class="pn">,</span> <span class="n">50.</span><span class="pn">,</span> <span class="n">1.7</span><span class="pn">,</span> <span class="n">0.1</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 147)" onmouseover="showTip(event, 'fs9', 147)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs20', 148)" onmouseover="showTip(event, 'fs20', 148)" class="id">UsPsa30_360</span><span class="pn">)</span>
+<span class="fsi">Excel: 0.0000000   LibreOffice: -63.33333</span>
+</code></pre>
+<h2><a name="COUPDAYS-COUPDAYSBS-COUPDAYSNC" class="anchor" href="#COUPDAYS-COUPDAYSBS-COUPDAYSNC">COUPDAYS, COUPDAYSBS, COUPDAYSNC</a></h2>
+<p>In Excel the equality <code>coupDays = coupDaysBS + coupDaysNC</code> doesn't necessary hold when basis is other than Actual/Actual.</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span class="k">let</span> <span onmouseout="hideTip(event, 'fs33', 149)" onmouseover="showTip(event, 'fs33', 149)" class="id">cdParam</span> <span class="o">=</span> <span onmouseout="hideTip(event, 'fs6', 150)" onmouseover="showTip(event, 'fs6', 150)" class="fn">DateTime</span><span class="pn">(</span><span class="n">1980</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">15</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs6', 151)" onmouseover="showTip(event, 'fs6', 151)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2000</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs7', 152)" onmouseover="showTip(event, 'fs7', 152)" class="en">Frequency</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs12', 153)" onmouseover="showTip(event, 'fs12', 153)" class="id">Annual</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs9', 154)" onmouseover="showTip(event, 'fs9', 154)" class="en">DayCountBasis</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs20', 155)" onmouseover="showTip(event, 'fs20', 155)" class="id">UsPsa30_360</span>
+
+<span onmouseout="hideTip(event, 'fs4', 156)" onmouseover="showTip(event, 'fs4', 156)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs34', 157)" onmouseover="showTip(event, 'fs34', 157)" class="id">CoupDays</span> <span onmouseout="hideTip(event, 'fs33', 158)" onmouseover="showTip(event, 'fs33', 158)" class="id">cdParam</span> 
+<span onmouseout="hideTip(event, 'fs4', 159)" onmouseover="showTip(event, 'fs4', 159)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs35', 160)" onmouseover="showTip(event, 'fs35', 160)" class="id">CoupDaysBS</span> <span onmouseout="hideTip(event, 'fs33', 161)" onmouseover="showTip(event, 'fs33', 161)" class="id">cdParam</span>
+<span onmouseout="hideTip(event, 'fs4', 162)" onmouseover="showTip(event, 'fs4', 162)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs36', 163)" onmouseover="showTip(event, 'fs36', 163)" class="id">CoupDaysNC</span> <span onmouseout="hideTip(event, 'fs33', 164)" onmouseover="showTip(event, 'fs33', 164)" class="id">cdParam</span>
+<span class="fsi">Excel: 360 &lt;&gt; 345 + 13  LibreOffice: 360 = 345 + 15</span>
+</code></pre>
+<h2><a name="CUMIPMT-CUMPRINC" class="anchor" href="#CUMIPMT-CUMPRINC">CUMIPMT, CUMPRINC</a></h2>
+<p>OO analogs are called CUMIPMT_ADD and CUMPRINC_ADD (they're expected to be <a href="https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_CUMIPMT_ADD_function">compatible with Excel</a>)</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span onmouseout="hideTip(event, 'fs4', 165)" onmouseover="showTip(event, 'fs4', 165)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs37', 166)" onmouseover="showTip(event, 'fs37', 166)" class="id">CumIPmt</span><span class="pn">(</span><span class="n">0.6</span><span class="pn">,</span> <span class="n">10.</span><span class="pn">,</span> <span class="n">100.</span><span class="pn">,</span> <span class="n">1.3</span><span class="pn">,</span> <span class="n">2.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs38', 167)" onmouseover="showTip(event, 'fs38', 167)" class="en">PaymentDue</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs39', 168)" onmouseover="showTip(event, 'fs39', 168)" class="id">EndOfPeriod</span><span class="pn">)</span>
+<span class="fsi">Excel: -59.669577   LibreOffice: -119.669577</span>
+<span onmouseout="hideTip(event, 'fs4', 169)" onmouseover="showTip(event, 'fs4', 169)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs40', 170)" onmouseover="showTip(event, 'fs40', 170)" class="id">CumPrinc</span><span class="pn">(</span><span class="n">0.6</span><span class="pn">,</span> <span class="n">10.</span><span class="pn">,</span> <span class="n">100.</span><span class="pn">,</span> <span class="n">1.3</span><span class="pn">,</span> <span class="n">2.</span><span class="pn">,</span> <span onmouseout="hideTip(event, 'fs38', 171)" onmouseover="showTip(event, 'fs38', 171)" class="en">PaymentDue</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs39', 172)" onmouseover="showTip(event, 'fs39', 172)" class="id">EndOfPeriod</span><span class="pn">)</span>
+<span class="fsi">Excel: -0.8811289   LibreOffice: -1.431834</span>
+</code></pre>
+<h2><a name="DB-DDB" class="anchor" href="#DB-DDB">DB, DDB</a></h2>
+<p>Seems like DDB doesn't accept fractional periods.</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span onmouseout="hideTip(event, 'fs4', 173)" onmouseover="showTip(event, 'fs4', 173)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs41', 174)" onmouseover="showTip(event, 'fs41', 174)" class="id">Db</span><span class="pn">(</span><span class="n">100.</span><span class="pn">,</span> <span class="n">10.</span><span class="pn">,</span> <span class="n">1.</span><span class="pn">,</span> <span class="n">0.3</span><span class="pn">,</span> <span class="n">1.</span><span class="pn">)</span>
+<span class="fsi">Excel: 7.5  LibreOffice: 0.0</span>
+<span onmouseout="hideTip(event, 'fs4', 175)" onmouseover="showTip(event, 'fs4', 175)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs42', 176)" onmouseover="showTip(event, 'fs42', 176)" class="id">Ddb</span><span class="pn">(</span><span class="n">100.</span><span class="pn">,</span> <span class="n">10.</span><span class="pn">,</span> <span class="n">1.</span><span class="pn">,</span> <span class="n">0.3</span><span class="pn">,</span> <span class="n">1.</span><span class="pn">)</span>
+<span class="fsi">Excel: 90.0 LibreOffice: Err:502</span>
+</code></pre>
+<h2><a name="IRR-XIRR" class="anchor" href="#IRR-XIRR">IRR, XIRR</a></h2>
+<p>The implementation details of root finding algorithms might be the cause of differences.
+We didn't check all the tests, because OO doesn't accept arrays as parameters (e.g. {-100;100}). But some of them don't work anyway.</p>
+<pre class="fssnip highlighted"><code lang="fsharp"><span onmouseout="hideTip(event, 'fs4', 177)" onmouseover="showTip(event, 'fs4', 177)" class="rt">Financial</span><span class="pn">.</span><span onmouseout="hideTip(event, 'fs43', 178)" onmouseover="showTip(event, 'fs43', 178)" class="id">XIrr</span><span class="pn">(</span><span class="pn">[</span><span class="n">206101714.849377</span><span class="pn">;</span> <span class="o">-</span><span class="n">156650972.54265</span><span class="pn">]</span><span class="pn">,</span> <span class="pn">[</span><span onmouseout="hideTip(event, 'fs6', 179)" onmouseover="showTip(event, 'fs6', 179)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2001</span><span class="pn">,</span> <span class="n">2</span><span class="pn">,</span> <span class="n">28</span><span class="pn">)</span><span class="pn">;</span> <span onmouseout="hideTip(event, 'fs6', 180)" onmouseover="showTip(event, 'fs6', 180)" class="fn">DateTime</span><span class="pn">(</span><span class="n">2001</span><span class="pn">,</span> <span class="n">3</span><span class="pn">,</span> <span class="n">31</span><span class="pn">)</span><span class="pn">]</span><span class="pn">,</span> <span class="o">-</span><span class="n">0.1</span><span class="pn">)</span>
+<span class="fsi">Excel: -0.960452    LibreOffice: Err:502 (Invalid argument)</span>
+</code></pre>
+
+        <div class="fsdocs-tip" id="fs1">namespace System</div>
+<div class="fsdocs-tip" id="fs2">namespace Excel</div>
+<div class="fsdocs-tip" id="fs3">namespace Excel.FinancialFunctions</div>
+<div class="fsdocs-tip" id="fs4">type Financial =
+  static member AccrInt: issue: DateTime * firstInterest: DateTime * settlement: DateTime * rate: float * par: float * frequency: Frequency * basis: DayCountBasis * calcMethod: AccrIntCalcMethod -&gt; float + 1 overload
+  static member AccrIntM: issue: DateTime * settlement: DateTime * rate: float * par: float * basis: DayCountBasis -&gt; float
+  static member AmorDegrc: cost: float * datePurchased: DateTime * firstPeriod: DateTime * salvage: float * period: float * rate: float * basis: DayCountBasis * excelCompliant: bool -&gt; float
+  static member AmorLinc: cost: float * datePurchased: DateTime * firstPeriod: DateTime * salvage: float * period: float * rate: float * basis: DayCountBasis -&gt; float
+  static member CoupDays: settlement: DateTime * maturity: DateTime * frequency: Frequency * basis: DayCountBasis -&gt; float
+  static member CoupDaysBS: settlement: DateTime * maturity: DateTime * frequency: Frequency * basis: DayCountBasis -&gt; float
+  static member CoupDaysNC: settlement: DateTime * maturity: DateTime * frequency: Frequency * basis: DayCountBasis -&gt; float
+  static member CoupNCD: settlement: DateTime * maturity: DateTime * frequency: Frequency * basis: DayCountBasis -&gt; DateTime
+  static member CoupNum: settlement: DateTime * maturity: DateTime * frequency: Frequency * basis: DayCountBasis -&gt; float
+  static member CoupPCD: settlement: DateTime * maturity: DateTime * frequency: Frequency * basis: DayCountBasis -&gt; DateTime
+  ...<br /><em>&lt;summary&gt;
+ A wrapper class to expose the Excel financial functions API to .NET clients
+&lt;/summary&gt;</em></div>
+<div class="fsdocs-tip" id="fs5">static member Financial.OddFYield: settlement: DateTime * maturity: DateTime * issue: DateTime * firstCoupon: DateTime * rate: float * pr: float * redemption: float * frequency: Frequency * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs6">Multiple items<br />[&lt;Struct&gt;]
+type DateTime =
+  new: year: int * month: int * day: int -&gt; unit + 10 overloads
+  member Add: value: TimeSpan -&gt; DateTime
+  member AddDays: value: float -&gt; DateTime
+  member AddHours: value: float -&gt; DateTime
+  member AddMilliseconds: value: float -&gt; DateTime
+  member AddMinutes: value: float -&gt; DateTime
+  member AddMonths: months: int -&gt; DateTime
+  member AddSeconds: value: float -&gt; DateTime
+  member AddTicks: value: int64 -&gt; DateTime
+  member AddYears: value: int -&gt; DateTime
+  ...<br /><em>&lt;summary&gt;Represents an instant in time, typically expressed as a date and time of day.&lt;/summary&gt;</em><br /><br />--------------------<br />DateTime ()<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(ticks: int64) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(ticks: int64, kind: DateTimeKind) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, calendar: Globalization.Calendar) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, kind: DateTimeKind) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, calendar: Globalization.Calendar) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em><br />DateTime(year: int, month: int, day: int, hour: int, minute: int, second: int, millisecond: int, kind: DateTimeKind) : DateTime<br />&#160;&#160;&#160;<em>(+0 other overloads)</em></div>
+<div class="fsdocs-tip" id="fs7">[&lt;Struct&gt;]
+type Frequency =
+  | Annual = 1
+  | SemiAnnual = 2
+  | Quarterly = 4<br /><em>&lt;summary&gt;
+ The number of coupon payments per year
+&lt;/summary&gt;</em></div>
+<div class="fsdocs-tip" id="fs8">Frequency.Quarterly: Frequency = 4</div>
+<div class="fsdocs-tip" id="fs9">[&lt;Struct&gt;]
+type DayCountBasis =
+  | UsPsa30_360 = 0
+  | ActualActual = 1
+  | Actual360 = 2
+  | Actual365 = 3
+  | Europ30_360 = 4<br /><em>&lt;summary&gt;
+ The type of Day Count Basis
+&lt;/summary&gt;</em></div>
+<div class="fsdocs-tip" id="fs10">DayCountBasis.ActualActual: DayCountBasis = 1<br /><em>&lt;summary&gt;
+ Actual/Actual
+&lt;/summary&gt;</em></div>
+<div class="fsdocs-tip" id="fs11">static member Financial.OddFPrice: settlement: DateTime * maturity: DateTime * issue: DateTime * firstCoupon: DateTime * rate: float * yld: float * redemption: float * frequency: Frequency * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs12">Frequency.Annual: Frequency = 1</div>
+<div class="fsdocs-tip" id="fs13">DayCountBasis.Actual360: DayCountBasis = 2<br /><em>&lt;summary&gt;
+ Actual/360
+&lt;/summary&gt;</em></div>
+<div class="fsdocs-tip" id="fs14">static member Financial.OddLPrice: settlement: DateTime * maturity: DateTime * lastInterest: DateTime * rate: float * yld: float * redemption: float * frequency: Frequency * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs15">Frequency.SemiAnnual: Frequency = 2</div>
+<div class="fsdocs-tip" id="fs16">static member Financial.OddLYield: settlement: DateTime * maturity: DateTime * lastInterest: DateTime * rate: float * pr: float * redemption: float * frequency: Frequency * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs17">val accrint: basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs18">val basis: DayCountBasis</div>
+<div class="fsdocs-tip" id="fs19">static member Financial.AccrInt: issue: DateTime * firstInterest: DateTime * settlement: DateTime * rate: float * par: float * frequency: Frequency * basis: DayCountBasis -&gt; float<br />static member Financial.AccrInt: issue: DateTime * firstInterest: DateTime * settlement: DateTime * rate: float * par: float * frequency: Frequency * basis: DayCountBasis * calcMethod: AccrIntCalcMethod -&gt; float</div>
+<div class="fsdocs-tip" id="fs20">DayCountBasis.UsPsa30_360: DayCountBasis = 0<br /><em>&lt;summary&gt;
+ US 30/360
+&lt;/summary&gt;</em></div>
+<div class="fsdocs-tip" id="fs21">DayCountBasis.Actual365: DayCountBasis = 3<br /><em>&lt;summary&gt;
+ Actual/365
+&lt;/summary&gt;</em></div>
+<div class="fsdocs-tip" id="fs22">static member Financial.AccrIntM: issue: DateTime * settlement: DateTime * rate: float * par: float * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs23">static member Financial.Disc: settlement: DateTime * maturity: DateTime * pr: float * redemption: float * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs24">static member Financial.Duration: settlement: DateTime * maturity: DateTime * coupon: float * yld: float * frequency: Frequency * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs25">static member Financial.MDuration: settlement: DateTime * maturity: DateTime * coupon: float * yld: float * frequency: Frequency * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs26">static member Financial.Price: settlement: DateTime * maturity: DateTime * rate: float * yld: float * redemption: float * frequency: Frequency * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs27">static member Financial.PriceDisc: settlement: DateTime * maturity: DateTime * discount: float * redemption: float * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs28">static member Financial.IntRate: settlement: DateTime * maturity: DateTime * investment: float * redemption: float * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs29">static member Financial.TBillPrice: settlement: DateTime * maturity: DateTime * discount: float -&gt; float</div>
+<div class="fsdocs-tip" id="fs30">static member Financial.Received: settlement: DateTime * maturity: DateTime * investment: float * discount: float * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs31">static member Financial.AmorDegrc: cost: float * datePurchased: DateTime * firstPeriod: DateTime * salvage: float * period: float * rate: float * basis: DayCountBasis * excelCompliant: bool -&gt; float</div>
+<div class="fsdocs-tip" id="fs32">static member Financial.AmorLinc: cost: float * datePurchased: DateTime * firstPeriod: DateTime * salvage: float * period: float * rate: float * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs33">val cdParam: DateTime * DateTime * Frequency * DayCountBasis</div>
+<div class="fsdocs-tip" id="fs34">static member Financial.CoupDays: settlement: DateTime * maturity: DateTime * frequency: Frequency * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs35">static member Financial.CoupDaysBS: settlement: DateTime * maturity: DateTime * frequency: Frequency * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs36">static member Financial.CoupDaysNC: settlement: DateTime * maturity: DateTime * frequency: Frequency * basis: DayCountBasis -&gt; float</div>
+<div class="fsdocs-tip" id="fs37">static member Financial.CumIPmt: rate: float * nper: float * pv: float * startPeriod: float * endPeriod: float * typ: PaymentDue -&gt; float</div>
+<div class="fsdocs-tip" id="fs38">[&lt;Struct&gt;]
+type PaymentDue =
+  | EndOfPeriod = 0
+  | BeginningOfPeriod = 1<br /><em>&lt;summary&gt;
+ Indicates when payments are due (end/beginning of period)
+&lt;/summary&gt;</em></div>
+<div class="fsdocs-tip" id="fs39">PaymentDue.EndOfPeriod: PaymentDue = 0</div>
+<div class="fsdocs-tip" id="fs40">static member Financial.CumPrinc: rate: float * nper: float * pv: float * startPeriod: float * endPeriod: float * typ: PaymentDue -&gt; float</div>
+<div class="fsdocs-tip" id="fs41">static member Financial.Db: cost: float * salvage: float * life: float * period: float -&gt; float<br />static member Financial.Db: cost: float * salvage: float * life: float * period: float * month: float -&gt; float</div>
+<div class="fsdocs-tip" id="fs42">static member Financial.Ddb: cost: float * salvage: float * life: float * period: float -&gt; float<br />static member Financial.Ddb: cost: float * salvage: float * life: float * period: float * factor: float -&gt; float</div>
+<div class="fsdocs-tip" id="fs43">static member Financial.XIrr: values: float seq * dates: DateTime seq -&gt; float<br />static member Financial.XIrr: values: float seq * dates: DateTime seq * guess: float -&gt; float</div>
+
+    </div>
+</main>
+<aside id="fsdocs-page-menu">
+    <p id="on-this-page">On this page</p>
+    <ul>
+  <li class="level-1">
+    <a href="#Difference-between-OpenOffice-and-the-library">
+      Difference between OpenOffice and the library
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#ODDFYIELD-ODDFPRICE">
+      ODDFYIELD, ODDFPRICE
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#ODDLYIELD-OODLPRICE">
+      ODDLYIELD, OODLPRICE
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#ACCRINT-DISC-DURATION-PRICE-YIELD-INTRATE-TBILL-and-others">
+      ACCRINT, DISC, DURATION, PRICE, YIELD, INTRATE, TBILL* and others
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#AMORLINC">
+      AMORLINC
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#COUPDAYS-COUPDAYSBS-COUPDAYSNC">
+      COUPDAYS, COUPDAYSBS, COUPDAYSNC
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#CUMIPMT-CUMPRINC">
+      CUMIPMT, CUMPRINC
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#DB-DDB">
+      DB, DDB
+    </a>
+  </li>
+  <li class="level-2">
+    <a href="#IRR-XIRR">
+      IRR, XIRR
+    </a>
+  </li>
+</ul>
+</aside>
+<dialog>
+    <input type="search" placeholder="Search docs" />
+    <div class="results">
+        <ul></ul>
+        <p class="empty">Type something to start searching.</p>
+    </div>
+</dialog>
+<script type="module" src="https://fsprojects.github.io/ExcelFinancialFunctions/content/fsdocs-tips.js"></script>
+<script type="module" src="https://fsprojects.github.io/ExcelFinancialFunctions/content/fsdocs-theme-toggle.js"></script>
+<script type="module" src="https://fsprojects.github.io/ExcelFinancialFunctions/content/fsdocs-theme.js"></script>
+<script type="module" src="https://fsprojects.github.io/ExcelFinancialFunctions/content/fsdocs-search.js"></script>
+
+</body>
+</html>
