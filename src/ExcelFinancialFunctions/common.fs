@@ -39,7 +39,7 @@ module internal Common =
            
     // Date functions
     let days (after:DateTime) (before:DateTime) = (after - before).Days
-    let date y m d = new DateTime(y, m, d)
+    let date (y: int) (m: int) (d: int) = new DateTime(y, m, d)
     let (|Date|) (d1:DateTime) = (d1.Year,d1.Month,d1.Day)
     let isLeapYear (Date(y,_,_) as d) = DateTime.IsLeapYear(y)
     let leapYear y = DateTime.IsLeapYear(y)
